@@ -11,7 +11,7 @@ import SwiftUI
 struct FastAPP1: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            OnboardingView()
         }
     }
 }
