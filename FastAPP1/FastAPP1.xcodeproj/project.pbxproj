@@ -26,6 +26,14 @@
 		162F056D2CF756430089585F /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F056C2CF756430089585F /* TodoListViewModel.swift */; };
 		162F056F2CF7564D0089585F /* TodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F056E2CF7564D0089585F /* TodoViewModel.swift */; };
 		162F05712CF7565A0089585F /* TodoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05702CF7565A0089585F /* TodoView.swift */; };
+		162F05742CFDC1890089585F /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05732CFDC1890089585F /* MemoModel.swift */; };
+		162F05772CFDC1F40089585F /* MemoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05762CFDC1F40089585F /* MemoListView.swift */; };
+		162F05792CFDC1FD0089585F /* MemoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05782CFDC1FD0089585F /* MemoListViewModel.swift */; };
+		162F057C2CFDD5280089585F /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F057B2CFDD5280089585F /* MemoView.swift */; };
+		162F057E2CFDD5300089585F /* MemoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F057D2CFDD5300089585F /* MemoViewModel.swift */; };
+		162F05802CFDDD080089585F /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F057F2CFDDD080089585F /* Double+Extensions.swift */; };
+		162F05832CFDDD910089585F /* VoiceRecorderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05822CFDDD910089585F /* VoiceRecorderViewModel.swift */; };
+		162F05852CFDDD9B0089585F /* VoiceRecorderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05842CFDDD9B0089585F /* VoiceRecorderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +57,14 @@
 		162F056C2CF756430089585F /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		162F056E2CF7564D0089585F /* TodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoViewModel.swift; sourceTree = "<group>"; };
 		162F05702CF7565A0089585F /* TodoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoView.swift; sourceTree = "<group>"; };
+		162F05732CFDC1890089585F /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		162F05762CFDC1F40089585F /* MemoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListView.swift; sourceTree = "<group>"; };
+		162F05782CFDC1FD0089585F /* MemoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoListViewModel.swift; sourceTree = "<group>"; };
+		162F057B2CFDD5280089585F /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		162F057D2CFDD5300089585F /* MemoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewModel.swift; sourceTree = "<group>"; };
+		162F057F2CFDDD080089585F /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
+		162F05822CFDDD910089585F /* VoiceRecorderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderViewModel.swift; sourceTree = "<group>"; };
+		162F05842CFDDD9B0089585F /* VoiceRecorderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoiceRecorderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +153,7 @@
 		162F05472CF4A3430089585F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				162F05722CFDC1770089585F /* Memo */,
 				162F05622CF755370089585F /* Todo */,
 				162F05542CF747410089585F /* Path */,
 				162F05532CF747370089585F /* Onboarding */,
@@ -148,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				162F055B2CF750B60089585F /* Date+Extensions.swift */,
+				162F057F2CFDDD080089585F /* Double+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -208,9 +226,11 @@
 		162F05662CF755ED0089585F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				162F05812CFDDD730089585F /* VoiceRecorder */,
 				162F05592CF7492A0089585F /* HomeView.swift */,
 				162F05682CF756280089585F /* HomeViewModel.swift */,
 				162F05652CF755DC0089585F /* TodoList */,
+				162F05752CFDC1DF0089585F /* MemoList */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -222,6 +242,42 @@
 				162F056E2CF7564D0089585F /* TodoViewModel.swift */,
 			);
 			path = Todo;
+			sourceTree = "<group>";
+		};
+		162F05722CFDC1770089585F /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				162F05732CFDC1890089585F /* MemoModel.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		162F05752CFDC1DF0089585F /* MemoList */ = {
+			isa = PBXGroup;
+			children = (
+				162F057A2CFDD51F0089585F /* Memo */,
+				162F05762CFDC1F40089585F /* MemoListView.swift */,
+				162F05782CFDC1FD0089585F /* MemoListViewModel.swift */,
+			);
+			path = MemoList;
+			sourceTree = "<group>";
+		};
+		162F057A2CFDD51F0089585F /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				162F057B2CFDD5280089585F /* MemoView.swift */,
+				162F057D2CFDD5300089585F /* MemoViewModel.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		162F05812CFDDD730089585F /* VoiceRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				162F05822CFDDD910089585F /* VoiceRecorderViewModel.swift */,
+				162F05842CFDDD9B0089585F /* VoiceRecorderView.swift */,
+			);
+			path = VoiceRecorder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,19 +353,27 @@
 			files = (
 				162F056F2CF7564D0089585F /* TodoViewModel.swift in Sources */,
 				162F05612CF752110089585F /* CustomNavigationBar.swift in Sources */,
+				162F05772CFDC1F40089585F /* MemoListView.swift in Sources */,
+				162F05742CFDC1890089585F /* MemoModel.swift in Sources */,
 				162F055F2CF751D10089585F /* NavigationBtnType.swift in Sources */,
 				162F05582CF747B10089585F /* PathModel.swift in Sources */,
 				162F056D2CF756430089585F /* TodoListViewModel.swift in Sources */,
 				162F056B2CF756380089585F /* TodoListView.swift in Sources */,
 				162F055C2CF750B60089585F /* Date+Extensions.swift in Sources */,
+				162F05832CFDDD910089585F /* VoiceRecorderViewModel.swift in Sources */,
 				162F054D2CF5F7680089585F /* OnboardingContentModel.swift in Sources */,
+				162F057C2CFDD5280089585F /* MemoView.swift in Sources */,
+				162F05792CFDC1FD0089585F /* MemoListViewModel.swift in Sources */,
 				162F05562CF7474F0089585F /* PathType.swift in Sources */,
 				162F05342CF4A1D70089585F /* FastAPP1.swift in Sources */,
 				162F05692CF756280089585F /* HomeViewModel.swift in Sources */,
+				162F057E2CFDD5300089585F /* MemoViewModel.swift in Sources */,
+				162F05852CFDDD9B0089585F /* VoiceRecorderView.swift in Sources */,
 				162F055A2CF7492A0089585F /* HomeView.swift in Sources */,
 				162F05642CF755400089585F /* TodoModel.swift in Sources */,
 				162F05712CF7565A0089585F /* TodoView.swift in Sources */,
 				162F05522CF5F89C0089585F /* OnboardingView.swift in Sources */,
+				162F05802CFDDD080089585F /* Double+Extensions.swift in Sources */,
 				162F05502CF5F7AA0089585F /* OnboardingViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +511,7 @@
 				DEVELOPMENT_TEAM = U5MDQP9G89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 접근";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -478,6 +543,7 @@
 				DEVELOPMENT_TEAM = U5MDQP9G89;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "마이크 접근";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

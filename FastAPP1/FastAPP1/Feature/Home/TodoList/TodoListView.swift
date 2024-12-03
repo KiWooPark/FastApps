@@ -206,3 +206,4 @@ private struct TodoCellView: View {
         .environmentObject(PathModel())
         .environmentObject(TodoListViewModel())
 }
+ 

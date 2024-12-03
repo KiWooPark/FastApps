@@ -32,4 +32,11 @@ extension Date {
             return f.string(from: self )
         }
     }
+    
+    var fVoiceRecorderTime: String {
+        let f = DateFormatter()
+        f.locale = Locale(identifier: "ko_kr")
+        f.dateFormat = "yyyy.M.d"
+        return f.string(from: self )
+    }
 }
