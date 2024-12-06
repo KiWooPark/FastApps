@@ -16,8 +16,7 @@ struct OnboardingView: View {
     
     var body: some View {
         NavigationStack(path: $pathModel.paths) {
-            //            OnboardingContentView(onboardingViewModel: onboardingViewModel)
-           TimerView()
+            OnboardingContentView(onboardingViewModel: onboardingViewModel)
                 .navigationDestination(
                     for: PathType.self,
                     destination: { pathType in
@@ -25,6 +24,8 @@ struct OnboardingView: View {
                         case .homeView:
                             HomeView()
                                 .navigationBarBackButtonHidden()
+                                .environmentObject(todoListViewModel)
+                                .environmentObject(memoListViewModel)
                         case .todoView:
                             TodoView()
                                 .navigationBarBackButtonHidden()
@@ -143,7 +144,7 @@ private struct StartButtonView: View {
     
     fileprivate var body: some View {
         Button {
-            pathModel.paths.append(.todoView)
+            pathModel.paths.append(.homeView)
         } label: {
             HStack {
                 Text("시작하기")
@@ -161,5 +162,4 @@ private struct StartButtonView: View {
 
 #Preview {
     OnboardingView()
-    //    OnboardingCellView(onboardingContent: OnboardingContent(imageFileName: "onboarding_1", title: "1111", subTitle: "2222"))
 }
