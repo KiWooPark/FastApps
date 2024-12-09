@@ -13,35 +13,35 @@ struct MemoListView: View {
     @EnvironmentObject private var homeViewModel: HomeViewModel
 
     var body: some View {
-        ZStack {
-            VStack {
-                if !memoListViewModel.memos.isEmpty {
-                    CustomNavigationBar(
-                        isDisplayLeftBtn: false,
-                        rightBtnAction: {
-                            memoListViewModel.navigationRightBtnTapped()
-                        },
-                        rightBtnType: memoListViewModel.navigationBarRightBtnMode
-                    )
-                } else {
-                    Spacer()
-                        .frame(height: 20)
-                }
-
-                // 타이틀 뷰
-                TitleView()
-                
-                if memoListViewModel.memos.isEmpty {
-                    AnnouncementView()
-                } else {
-                    MemoListContentView()
-                        .padding(.top, 20)
-                }
+        
+        VStack {
+            if !memoListViewModel.memos.isEmpty {
+                CustomNavigationBar(
+                    isDisplayLeftBtn: false,
+                    rightBtnAction: {
+                        memoListViewModel.navigationRightBtnTapped()
+                    },
+                    rightBtnType: memoListViewModel.navigationBarRightBtnMode
+                )
+            } else {
+                Spacer()
+                    .frame(height: 20)
             }
-            writeMemoBtnView()
-                .padding(.trailing, 20)
-                .padding(.bottom, 50)
+            
+            // 타이틀 뷰
+            TitleView()
+            
+            if memoListViewModel.memos.isEmpty {
+                AnnouncementView()
+            } else {
+                MemoListContentView()
+                    .padding(.top, 20)
+            }
         }
+        .writeBtn(preform: {
+            pathModel.paths.append(.memoView(isCreateMode: true, memo: nil))
+        })
+        
         .alert(
             "메모 \(memoListViewModel.removeMemoCount)개 삭제하시겠습니까?",
             isPresented: $memoListViewModel.isDisplayRemoveMemoAlert

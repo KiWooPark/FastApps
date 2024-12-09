@@ -13,7 +13,7 @@ struct TodoListView: View {
     @EnvironmentObject private var homeViewModel: HomeViewModel
     
     var body: some View {
-        ZStack {
+        WriteBtn {
             VStack {
                 if !todoListViewModel.todos.isEmpty {
                     CustomNavigationBar(
@@ -38,26 +38,25 @@ struct TodoListView: View {
                         .padding(.top, 20)
                 }
             }
-            
-            WriteTodoBtnView()
-                .padding(.trailing, 20)
-                .padding(.bottom, 50)
-        }
-        .alert(
-            "To do list \(todoListViewModel.removeTodosCount)개 삭제하시겠습니까?",
-            isPresented: $todoListViewModel.isDisplayRemoveTodoAlert
-        ) {
-            Button("삭제", role: .destructive) {
-                todoListViewModel.removeBtnTapped()
+//            .modifier(WriteBtnViewModifire(action: { pathModel.paths.append(.todoView) }))
+            .alert(
+                "To do list \(todoListViewModel.removeTodosCount)개 삭제하시겠습니까?",
+                isPresented: $todoListViewModel.isDisplayRemoveTodoAlert
+            ) {
+                Button("삭제", role: .destructive) {
+                    todoListViewModel.removeBtnTapped()
+                }
+                Button("취소", role: .cancel) { }
             }
-            Button("취소", role: .cancel) { }
+            .onChange(
+                of: todoListViewModel.todos,
+                perform: { todos in
+                    homeViewModel.setTodoCount(todos.count)
+                }
+            )
+        } action: {
+            pathModel.paths.append(.todoView)
         }
-        .onChange(
-            of: todoListViewModel.todos,
-            perform: { todos in
-                homeViewModel.setTodoCount(todos.count)
-            }
-        )
     }
 }
 

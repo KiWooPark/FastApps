@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		160612D32D032524002C5707 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160612D22D032524002C5707 /* SettingView.swift */; };
 		160612D82D032D24002C5707 /* TabModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160612D72D032D24002C5707 /* TabModel.swift */; };
+		160612DB2D033BBB002C5707 /* WriteBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160612DA2D033BBB002C5707 /* WriteBtn.swift */; };
 		162F05342CF4A1D70089585F /* FastAPP1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162F05332CF4A1D70089585F /* FastAPP1.swift */; };
 		162F05382CF4A1D90089585F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162F05372CF4A1D90089585F /* Assets.xcassets */; };
 		162F053B2CF4A1D90089585F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 162F053A2CF4A1D90089585F /* Preview Assets.xcassets */; };
@@ -47,6 +48,7 @@
 /* Begin PBXFileReference section */
 		160612D22D032524002C5707 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		160612D72D032D24002C5707 /* TabModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabModel.swift; sourceTree = "<group>"; };
+		160612DA2D033BBB002C5707 /* WriteBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteBtn.swift; sourceTree = "<group>"; };
 		162F05302CF4A1D70089585F /* FastAPP1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastAPP1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		162F05332CF4A1D70089585F /* FastAPP1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastAPP1.swift; sourceTree = "<group>"; };
 		162F05372CF4A1D90089585F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -117,6 +119,14 @@
 			path = Tab;
 			sourceTree = "<group>";
 		};
+		160612D92D033BA9002C5707 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				160612DA2D033BBB002C5707 /* WriteBtn.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
 		162F05272CF4A1D70089585F = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		162F05452CF4A3300089585F /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				160612D92D033BA9002C5707 /* CustomView */,
 				162F055D2CF751AF0089585F /* NavigationBar */,
 			);
 			path = Component;
@@ -448,6 +459,7 @@
 				162F057E2CFDD5300089585F /* MemoViewModel.swift in Sources */,
 				162F05852CFDDD9B0089585F /* VoiceRecorderView.swift in Sources */,
 				162F055A2CF7492A0089585F /* HomeView.swift in Sources */,
+				160612DB2D033BBB002C5707 /* WriteBtn.swift in Sources */,
 				162F05642CF755400089585F /* TodoModel.swift in Sources */,
 				162F05712CF7565A0089585F /* TodoView.swift in Sources */,
 				162F05522CF5F89C0089585F /* OnboardingView.swift in Sources */,
