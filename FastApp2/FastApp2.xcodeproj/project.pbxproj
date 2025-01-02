@@ -13,6 +13,22 @@
 		160613102D070140002C5707 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1606130E2D070140002C5707 /* Main.storyboard */; };
 		160613122D070141002C5707 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 160613112D070141002C5707 /* Assets.xcassets */; };
 		160613152D070141002C5707 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 160613132D070141002C5707 /* LaunchScreen.storyboard */; };
+		1606131F2D071532002C5707 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1606131E2D071532002C5707 /* HomeViewController.swift */; };
+		160613232D0715D5002C5707 /* HomeVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160613212D0715D5002C5707 /* HomeVideoCell.swift */; };
+		160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160613222D0715D5002C5707 /* HomeVideoCell.xib */; };
+		160613262D072D54002C5707 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160613252D072D54002C5707 /* HomeSection.swift */; };
+		160613282D07304F002C5707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160613272D07304F002C5707 /* TabBarController.swift */; };
+		1612AC8C2D22BC14004E398F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1612AC8B2D22BC14004E398F /* .swiftlint.yml */; };
+		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
+		164C7D042D157046007E2F18 /* HomeRecommendItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D022D157046007E2F18 /* HomeRecommendItemCell.swift */; };
+		164C7D052D157046007E2F18 /* HomeRecommendItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D032D157046007E2F18 /* HomeRecommendItemCell.xib */; };
+		164C7D0A2D15706F007E2F18 /* HomeRecommendContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D082D15706F007E2F18 /* HomeRecommendContainerCell.swift */; };
+		164C7D0B2D15706F007E2F18 /* HomeRecommendContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D092D15706F007E2F18 /* HomeRecommendContainerCell.xib */; };
+		164C7D0E2D15707F007E2F18 /* HomeHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D0C2D15707F007E2F18 /* HomeHeaderCell.swift */; };
+		164C7D0F2D15707F007E2F18 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D0D2D15707F007E2F18 /* HomeHeaderCell.xib */; };
+		164C7D122D15708C007E2F18 /* HomeFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D102D15708C007E2F18 /* HomeFooterCell.swift */; };
+		164C7D132D15708C007E2F18 /* HomeFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D112D15708C007E2F18 /* HomeFooterCell.xib */; };
+		1690CE172D266FBE00989A1A /* .swiftformat.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE162D266FBE00989A1A /* .swiftformat.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,22 @@
 		160613112D070141002C5707 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		160613142D070141002C5707 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		160613162D070141002C5707 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1606131E2D071532002C5707 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		160613212D0715D5002C5707 /* HomeVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVideoCell.swift; sourceTree = "<group>"; };
+		160613222D0715D5002C5707 /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
+		160613252D072D54002C5707 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
+		160613272D07304F002C5707 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1612AC8B2D22BC14004E398F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = FastAPP2/Home/.swiftlint.yml; sourceTree = "<group>"; };
+		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		164C7D022D157046007E2F18 /* HomeRecommendItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendItemCell.swift; sourceTree = "<group>"; };
+		164C7D032D157046007E2F18 /* HomeRecommendItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendItemCell.xib; sourceTree = "<group>"; };
+		164C7D082D15706F007E2F18 /* HomeRecommendContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendContainerCell.swift; sourceTree = "<group>"; };
+		164C7D092D15706F007E2F18 /* HomeRecommendContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecommendContainerCell.xib; sourceTree = "<group>"; };
+		164C7D0C2D15707F007E2F18 /* HomeHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderCell.swift; sourceTree = "<group>"; };
+		164C7D0D2D15707F007E2F18 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
+		164C7D102D15708C007E2F18 /* HomeFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterCell.swift; sourceTree = "<group>"; };
+		164C7D112D15708C007E2F18 /* HomeFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFooterCell.xib; sourceTree = "<group>"; };
+		1690CE162D266FBE00989A1A /* .swiftformat.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftformat.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +72,8 @@
 		160612FC2D070140002C5707 = {
 			isa = PBXGroup;
 			children = (
+				1690CE162D266FBE00989A1A /* .swiftformat.yml */,
+				1612AC8B2D22BC14004E398F /* .swiftlint.yml */,
 				160613072D070140002C5707 /* FastAPP2 */,
 				160613062D070140002C5707 /* Products */,
 			);
@@ -56,6 +90,8 @@
 		160613072D070140002C5707 /* FastAPP2 */ = {
 			isa = PBXGroup;
 			children = (
+				160613272D07304F002C5707 /* TabBarController.swift */,
+				1606131D2D071521002C5707 /* Home */,
 				1606131C2D071396002C5707 /* Login */,
 				160613082D070140002C5707 /* AppDelegate.swift */,
 				1606130A2D070140002C5707 /* SceneDelegate.swift */,
@@ -75,6 +111,34 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		1606131D2D071521002C5707 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				160613202D0715BB002C5707 /* Cell */,
+				1606131E2D071532002C5707 /* HomeViewController.swift */,
+				160613252D072D54002C5707 /* HomeSection.swift */,
+				164C7D002D157014007E2F18 /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		160613202D0715BB002C5707 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				160613212D0715D5002C5707 /* HomeVideoCell.swift */,
+				160613222D0715D5002C5707 /* HomeVideoCell.xib */,
+				164C7D022D157046007E2F18 /* HomeRecommendItemCell.swift */,
+				164C7D032D157046007E2F18 /* HomeRecommendItemCell.xib */,
+				164C7D082D15706F007E2F18 /* HomeRecommendContainerCell.swift */,
+				164C7D092D15706F007E2F18 /* HomeRecommendContainerCell.xib */,
+				164C7D0C2D15707F007E2F18 /* HomeHeaderCell.swift */,
+				164C7D0D2D15707F007E2F18 /* HomeHeaderCell.xib */,
+				164C7D102D15708C007E2F18 /* HomeFooterCell.swift */,
+				164C7D112D15708C007E2F18 /* HomeFooterCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,6 +146,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 160613192D070141002C5707 /* Build configuration list for PBXNativeTarget "FastAPP2" */;
 			buildPhases = (
+				1690CE142D266F0D00989A1A /* SwiftFormat */,
+				1612AC832D22B89B004E398F /* SwiftLint */,
 				160613012D070140002C5707 /* Sources */,
 				160613022D070140002C5707 /* Frameworks */,
 				160613032D070140002C5707 /* Resources */,
@@ -133,13 +199,60 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1612AC8C2D22BC14004E398F /* .swiftlint.yml in Resources */,
 				160613152D070141002C5707 /* LaunchScreen.storyboard in Resources */,
+				1690CE172D266FBE00989A1A /* .swiftformat.yml in Resources */,
 				160613122D070141002C5707 /* Assets.xcassets in Resources */,
+				164C7D052D157046007E2F18 /* HomeRecommendItemCell.xib in Resources */,
+				164C7D132D15708C007E2F18 /* HomeFooterCell.xib in Resources */,
+				160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */,
 				160613102D070140002C5707 /* Main.storyboard in Resources */,
+				164C7D0F2D15707F007E2F18 /* HomeHeaderCell.xib in Resources */,
+				164C7D0B2D15706F007E2F18 /* HomeRecommendContainerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1612AC832D22B89B004E398F /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/usr/local/bin\"\nif [ -x /usr/local/bin/swiftlint ]; then\n  /usr/local/bin/swiftlint lint $(find \"${SRCROOT}/FastAPP2\" -name \"*.swift\")\nelse\n  echo \"warning: SwiftLint not installed or not found at /usr/local/bin\"\nfi\n";
+		};
+		1690CE142D266F0D00989A1A /* SwiftFormat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftFormat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat > /dev/null; then\n    swiftformat \"$SRCROOT\"\nelse\n    echo \"warning: SwiftFormat not installed. Install it using 'brew install swiftformat'\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		160613012D070140002C5707 /* Sources */ = {
@@ -147,8 +260,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1606130D2D070140002C5707 /* LoginViewController.swift in Sources */,
+				164C7D0E2D15707F007E2F18 /* HomeHeaderCell.swift in Sources */,
 				160613092D070140002C5707 /* AppDelegate.swift in Sources */,
+				164C7D0A2D15706F007E2F18 /* HomeRecommendContainerCell.swift in Sources */,
+				160613262D072D54002C5707 /* HomeSection.swift in Sources */,
+				164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */,
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,
+				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
+				160613232D0715D5002C5707 /* HomeVideoCell.swift in Sources */,
+				1606131F2D071532002C5707 /* HomeViewController.swift in Sources */,
+				164C7D042D157046007E2F18 /* HomeRecommendItemCell.swift in Sources */,
+				164C7D122D15708C007E2F18 /* HomeFooterCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +333,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -274,7 +396,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
