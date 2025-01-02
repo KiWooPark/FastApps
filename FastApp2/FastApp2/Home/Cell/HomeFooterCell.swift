@@ -1,9 +1,5 @@
-//
-//  HomeFooterCell.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/20/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import UIKit
 
@@ -21,4 +17,6 @@ class HomeFooterCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+
+    func test(a _: Int, b _: Int, c _: Int, d _: Int) {}
 }

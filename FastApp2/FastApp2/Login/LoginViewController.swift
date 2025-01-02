@@ -1,14 +1,10 @@
-//
-//  LoginViewController.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/9/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet var loginBtn: UIButton!
+    @IBOutlet weak var loginBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()

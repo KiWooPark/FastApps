@@ -1,9 +1,5 @@
-//
-//  HomeVideoCell.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/9/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import UIKit
 
@@ -11,17 +7,17 @@ class HomeVideoCell: UITableViewCell {
     static let identifire: String = "HomeVideoCell"
     static let height: CGFloat = 321
 
-    @IBOutlet var containerView: UIView!
+    @IBOutlet weak var containerView: UIView!
 
-    @IBOutlet var thumbnailImageView: UIImageView!
+    @IBOutlet weak var thumbnailImageView: UIImageView!
 
-    @IBOutlet var hotImageView: UIImageView!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var subTitleLabel: UILabel!
+    @IBOutlet weak var hotImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subTitleLabel: UILabel!
 
-    @IBOutlet var channelImageView: UIImageView!
-    @IBOutlet var channelTitleLabel: UILabel!
-    @IBOutlet var channelSubTitleLabel: UILabel!
+    @IBOutlet weak var channelImageView: UIImageView!
+    @IBOutlet weak var channelTitleLabel: UILabel!
+    @IBOutlet weak var channelSubTitleLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

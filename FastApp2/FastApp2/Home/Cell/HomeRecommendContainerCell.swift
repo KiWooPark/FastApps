@@ -1,9 +1,5 @@
-//
-//  HomeRecommendContainerCell.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/20/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import UIKit
 
@@ -14,9 +10,9 @@ protocol HomeRecommendContainerCellDelegate: AnyObject {
 class HomeRecommendContainerCell: UITableViewCell {
     static let identifier: String = "HomeRecommendContainerCell"
 
-    @IBOutlet var tableView: UITableView!
-    @IBOutlet var containerView: UIView!
-    @IBOutlet var foldButton: UIButton!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var foldButton: UIButton!
 
     weak var delegate: HomeRecommendContainerCellDelegate?
 

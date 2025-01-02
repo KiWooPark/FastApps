@@ -1,9 +1,5 @@
-//
-//  TabBarController.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/9/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import UIKit
 

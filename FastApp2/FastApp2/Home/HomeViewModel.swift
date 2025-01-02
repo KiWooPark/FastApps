@@ -1,9 +1,5 @@
-//
-//  HomeViewModel.swift
-//  FastAPP2
-//
-//  Created by PKW on 12/20/24.
-//
+// Created by 박기우
+// All rights reserved.
 
 import Foundation
 

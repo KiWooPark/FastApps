@@ -28,7 +28,14 @@
 		164C7D0F2D15707F007E2F18 /* HomeHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D0D2D15707F007E2F18 /* HomeHeaderCell.xib */; };
 		164C7D122D15708C007E2F18 /* HomeFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D102D15708C007E2F18 /* HomeFooterCell.swift */; };
 		164C7D132D15708C007E2F18 /* HomeFooterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 164C7D112D15708C007E2F18 /* HomeFooterCell.xib */; };
-		1690CE172D266FBE00989A1A /* .swiftformat.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE162D266FBE00989A1A /* .swiftformat.yml */; };
+		1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */; };
+		1690CE202D26801800989A1A /* HomeRankingContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */; };
+		1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */; };
+		1690CE242D26821C00989A1A /* HomeRankingItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE222D26821C00989A1A /* HomeRankingItemCell.xib */; };
+		1690CE272D26883600989A1A /* HomeRecentWatchContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE252D26883600989A1A /* HomeRecentWatchContainerCell.swift */; };
+		1690CE282D26883600989A1A /* HomeRecentWatchContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE262D26883600989A1A /* HomeRecentWatchContainerCell.xib */; };
+		1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE292D26898400989A1A /* HomeRecentWatchItemCell.swift */; };
+		1690CE2C2D26898400989A1A /* HomeRecentWatchItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE2A2D26898400989A1A /* HomeRecentWatchItemCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,7 +62,14 @@
 		164C7D0D2D15707F007E2F18 /* HomeHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeHeaderCell.xib; sourceTree = "<group>"; };
 		164C7D102D15708C007E2F18 /* HomeFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFooterCell.swift; sourceTree = "<group>"; };
 		164C7D112D15708C007E2F18 /* HomeFooterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeFooterCell.xib; sourceTree = "<group>"; };
-		1690CE162D266FBE00989A1A /* .swiftformat.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftformat.yml; sourceTree = "<group>"; };
+		1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
+		1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
+		1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
+		1690CE222D26821C00989A1A /* HomeRankingItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingItemCell.xib; sourceTree = "<group>"; };
+		1690CE252D26883600989A1A /* HomeRecentWatchContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentWatchContainerCell.swift; sourceTree = "<group>"; };
+		1690CE262D26883600989A1A /* HomeRecentWatchContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchContainerCell.xib; sourceTree = "<group>"; };
+		1690CE292D26898400989A1A /* HomeRecentWatchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecentWatchItemCell.swift; sourceTree = "<group>"; };
+		1690CE2A2D26898400989A1A /* HomeRecentWatchItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRecentWatchItemCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +86,6 @@
 		160612FC2D070140002C5707 = {
 			isa = PBXGroup;
 			children = (
-				1690CE162D266FBE00989A1A /* .swiftformat.yml */,
 				1612AC8B2D22BC14004E398F /* .swiftlint.yml */,
 				160613072D070140002C5707 /* FastAPP2 */,
 				160613062D070140002C5707 /* Products */,
@@ -125,6 +138,7 @@
 		160613202D0715BB002C5707 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				1690CE1A2D267FE300989A1A /* Ranking */,
 				160613212D0715D5002C5707 /* HomeVideoCell.swift */,
 				160613222D0715D5002C5707 /* HomeVideoCell.xib */,
 				164C7D022D157046007E2F18 /* HomeRecommendItemCell.swift */,
@@ -139,6 +153,21 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		1690CE1A2D267FE300989A1A /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */,
+				1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */,
+				1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */,
+				1690CE222D26821C00989A1A /* HomeRankingItemCell.xib */,
+				1690CE252D26883600989A1A /* HomeRecentWatchContainerCell.swift */,
+				1690CE262D26883600989A1A /* HomeRecentWatchContainerCell.xib */,
+				1690CE292D26898400989A1A /* HomeRecentWatchItemCell.swift */,
+				1690CE2A2D26898400989A1A /* HomeRecentWatchItemCell.xib */,
+			);
+			path = Ranking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -146,7 +175,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 160613192D070141002C5707 /* Build configuration list for PBXNativeTarget "FastAPP2" */;
 			buildPhases = (
-				1690CE142D266F0D00989A1A /* SwiftFormat */,
 				1612AC832D22B89B004E398F /* SwiftLint */,
 				160613012D070140002C5707 /* Sources */,
 				160613022D070140002C5707 /* Frameworks */,
@@ -201,14 +229,17 @@
 			files = (
 				1612AC8C2D22BC14004E398F /* .swiftlint.yml in Resources */,
 				160613152D070141002C5707 /* LaunchScreen.storyboard in Resources */,
-				1690CE172D266FBE00989A1A /* .swiftformat.yml in Resources */,
 				160613122D070141002C5707 /* Assets.xcassets in Resources */,
 				164C7D052D157046007E2F18 /* HomeRecommendItemCell.xib in Resources */,
+				1690CE242D26821C00989A1A /* HomeRankingItemCell.xib in Resources */,
 				164C7D132D15708C007E2F18 /* HomeFooterCell.xib in Resources */,
+				1690CE282D26883600989A1A /* HomeRecentWatchContainerCell.xib in Resources */,
 				160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */,
 				160613102D070140002C5707 /* Main.storyboard in Resources */,
+				1690CE2C2D26898400989A1A /* HomeRecentWatchItemCell.xib in Resources */,
 				164C7D0F2D15707F007E2F18 /* HomeHeaderCell.xib in Resources */,
 				164C7D0B2D15706F007E2F18 /* HomeRecommendContainerCell.xib in Resources */,
+				1690CE202D26801800989A1A /* HomeRankingContainerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,24 +265,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export PATH=\"$PATH:/usr/local/bin\"\nif [ -x /usr/local/bin/swiftlint ]; then\n  /usr/local/bin/swiftlint lint $(find \"${SRCROOT}/FastAPP2\" -name \"*.swift\")\nelse\n  echo \"warning: SwiftLint not installed or not found at /usr/local/bin\"\nfi\n";
 		};
-		1690CE142D266F0D00989A1A /* SwiftFormat */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftFormat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftformat > /dev/null; then\n    swiftformat \"$SRCROOT\"\nelse\n    echo \"warning: SwiftFormat not installed. Install it using 'brew install swiftformat'\"\nfi\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,11 +272,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */,
+				1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */,
 				1606130D2D070140002C5707 /* LoginViewController.swift in Sources */,
 				164C7D0E2D15707F007E2F18 /* HomeHeaderCell.swift in Sources */,
 				160613092D070140002C5707 /* AppDelegate.swift in Sources */,
 				164C7D0A2D15706F007E2F18 /* HomeRecommendContainerCell.swift in Sources */,
 				160613262D072D54002C5707 /* HomeSection.swift in Sources */,
+				1690CE272D26883600989A1A /* HomeRecentWatchContainerCell.swift in Sources */,
+				1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */,
 				164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */,
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,
 				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
