@@ -11,9 +11,10 @@ protocol HomeRankingContainerCellDelegate: AnyObject {
     func homeRankingContainerCell(_ cell: HomeRankingContainerCell, didSelectItemAt index: Int)
 }
 
-class HomeRankingContainerCell: UITableViewCell {
+class HomeRankingContainerCell: UICollectionViewCell {
     static let identifier: String = "HomeRankingContainerCell"
-    static let height: CGFloat = 349
+    static let height: CGFloat = 265
+
     weak var delegate: HomeRankingContainerCellDelegate?
 
     @IBOutlet weak var rankCollectionView: UICollectionView!
@@ -48,11 +49,11 @@ extension HomeRankingContainerCell: UICollectionViewDataSource {
             withReuseIdentifier: HomeRankingItemCell.identifier,
             for: indexPath
         )
-        
+
         if let cell = cell as? HomeRankingItemCell {
             cell.setRank(indexPath.item + 1)
         }
-        
+
         return cell
     }
 }

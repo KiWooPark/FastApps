@@ -37,12 +37,18 @@ class HomeViewController: UIViewController {
             withReuseIdentifier: HomeFooterView.identifier
         )
 
-        // 비디오 셀
+        // 비디오 아이템
         self.videoCollectionView.register(
             UINib(nibName: HomeVideoCell.identifire, bundle: nil),
             forCellWithReuseIdentifier: HomeVideoCell.identifire
         )
 
+        // 랭킹 아이템
+        self.videoCollectionView.register(
+            UINib(nibName: HomeRankingContainerCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: HomeRankingContainerCell.identifier
+        )
+        
         self.videoCollectionView.dataSource = self
         self.videoCollectionView.delegate = self
     }
@@ -89,7 +95,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         case .video:
             return .init(width: width, height: HomeVideoCell.height)
         case .ranking:
-            return .zero
+            return .init(width: width, height: HomeRankingContainerCell.height)
         case .recentWatch:
             return .zero
         case .recommend:
@@ -111,7 +117,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         switch section {
         case .header, .footer:
             return 0
-        case .video, .ranking, .recentWatch, .recommend:
+        case .ranking:
+            return 21
+        case .video, .recentWatch, .recommend:
             return 21
         }
     }
@@ -138,9 +146,9 @@ extension HomeViewController: UICollectionViewDataSource {
         case .header:
             return 0
         case .video:
-            return 5
+            return 2
         case .ranking:
-            return 0
+            return 1
         case .recentWatch:
             return 0
         case .recommend:
@@ -162,7 +170,8 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVideoCell.identifire, for: indexPath)
             return cell
         case .ranking:
-            return UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingContainerCell.identifier, for: indexPath)
+            return cell
         case .recentWatch:
             return UICollectionViewCell()
         case .recommend:
