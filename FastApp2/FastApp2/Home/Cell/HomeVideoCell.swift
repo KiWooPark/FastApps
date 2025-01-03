@@ -3,7 +3,7 @@
 
 import UIKit
 
-class HomeVideoCell: UITableViewCell {
+class HomeVideoCell: UICollectionViewCell {
     static let identifire: String = "HomeVideoCell"
     static let height: CGFloat = 321
 
