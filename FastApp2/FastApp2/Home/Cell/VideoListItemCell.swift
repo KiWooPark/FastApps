@@ -3,9 +3,9 @@
 
 import UIKit
 
-class HomeRecommendItemCell: UITableViewCell {
+class VideoListItemCell: UITableViewCell {
     static let height: CGFloat = 71
-    static let identifier: String = "HomeRecommendItemCell"
+    static let identifier: String = "VideoListItemCell"
 
     @IBOutlet weak var thumbnailContainerView: UIView!
 

@@ -48,7 +48,19 @@ class HomeViewController: UIViewController {
             UINib(nibName: HomeRankingContainerCell.identifier, bundle: nil),
             forCellWithReuseIdentifier: HomeRankingContainerCell.identifier
         )
-        
+
+        // 최근 시청 비디오 아이템
+        self.videoCollectionView.register(
+            UINib(nibName: HomeRecentWatchContainerCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: HomeRecentWatchContainerCell.identifier
+        )
+
+        // 추천 비디오 아이템
+        self.videoCollectionView.register(
+            UINib(nibName: HomeRecommendContainerCell.identifier, bundle: nil),
+            forCellWithReuseIdentifier: HomeRecommendContainerCell.identifier
+        )
+
         self.videoCollectionView.dataSource = self
         self.videoCollectionView.delegate = self
     }
@@ -97,9 +109,12 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         case .ranking:
             return .init(width: width, height: HomeRankingContainerCell.height)
         case .recentWatch:
-            return .zero
+            return .init(width: width, height: HomeRecentWatchContainerCell.height)
         case .recommend:
-            return .zero
+            return .init(
+                width: width,
+                height: HomeRecommendContainerCell.height(viewModel: self.homeViewModel.recommendViewModel)
+            )
         }
     }
 
@@ -117,9 +132,7 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
         switch section {
         case .header, .footer:
             return 0
-        case .ranking:
-            return 21
-        case .video, .recentWatch, .recommend:
+        case .video, .ranking, .recentWatch, .recommend:
             return 21
         }
     }
@@ -150,9 +163,9 @@ extension HomeViewController: UICollectionViewDataSource {
         case .ranking:
             return 1
         case .recentWatch:
-            return 0
+            return 1
         case .recommend:
-            return 0
+            return 1
         case .footer:
             return 0
         }
@@ -173,9 +186,11 @@ extension HomeViewController: UICollectionViewDataSource {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingContainerCell.identifier, for: indexPath)
             return cell
         case .recentWatch:
-            return UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecentWatchContainerCell.identifier, for: indexPath)
+            return cell
         case .recommend:
-            return UICollectionViewCell()
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendContainerCell.identifier, for: indexPath)
+            return cell
         }
     }
 

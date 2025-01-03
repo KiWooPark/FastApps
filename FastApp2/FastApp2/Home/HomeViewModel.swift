@@ -3,4 +3,6 @@
 
 import Foundation
 
-class HomeViewModel {}
+class HomeViewModel {
+    let recommendViewModel: HomeRecommendViewModel = .init()
+}
