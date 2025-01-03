@@ -6,6 +6,9 @@ import UIKit
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginBtn: UIButton!
 
+    // 로그인 뷰 컨트롤러 세로방향 고정
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask { .portrait }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
