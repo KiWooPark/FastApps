@@ -3,9 +3,9 @@
 
 import UIKit
 
-class HomeHeaderCell: UITableViewCell {
-    static let height: CGFloat = 66
-    static let identifier: String = "HomeHeaderCell"
+class HomeFooterView: UICollectionReusableView {
+    static let height: CGFloat = 80
+    static let identifier: String = "HomeFooterView"
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CqF-re-XyH" customClass="HomeHeaderView" customModule="FastAPP2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-pA-Oqr">
+                    <rect key="frame" x="16" y="13" width="277" height="24"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QpZ-n4-Aqj">
+                            <rect key="frame" x="0.0" y="-2.3333333333333339" width="24" height="29"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="K사 영상/스트리밍" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-Fa-ySx">
+                            <rect key="frame" x="34" y="2.3333333333333339" width="117" height="19.333333333333329"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                            <color key="textColor" name="main-wh"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="VUu-Fa-ySx" firstAttribute="centerY" secondItem="0fT-pA-Oqr" secondAttribute="centerY" id="ABC-nt-GNl"/>
+                        <constraint firstItem="QpZ-n4-Aqj" firstAttribute="leading" secondItem="0fT-pA-Oqr" secondAttribute="leading" id="OoP-AO-se8"/>
+                        <constraint firstItem="QpZ-n4-Aqj" firstAttribute="centerY" secondItem="0fT-pA-Oqr" secondAttribute="centerY" id="Qvp-Vf-4yT"/>
+                        <constraint firstItem="VUu-Fa-ySx" firstAttribute="leading" secondItem="QpZ-n4-Aqj" secondAttribute="trailing" constant="10" id="zQR-bm-3Zh"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="main-yellow"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="0fT-pA-Oqr" secondAttribute="trailing" constant="27" id="AG7-OA-7ND"/>
+                <constraint firstItem="0fT-pA-Oqr" firstAttribute="top" secondItem="CqF-re-XyH" secondAttribute="top" constant="13" id="H6P-T1-ASE"/>
+                <constraint firstItem="0fT-pA-Oqr" firstAttribute="leading" secondItem="CqF-re-XyH" secondAttribute="leading" constant="16" id="ppD-Sa-vhF"/>
+                <constraint firstAttribute="bottom" secondItem="0fT-pA-Oqr" secondAttribute="bottom" constant="29" id="qXB-2F-Z43"/>
+            </constraints>
+            <point key="canvasLocation" x="171" y="24"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="logo" width="24" height="29"/>
+        <namedColor name="main-wh">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-yellow">
+            <color red="0.99215686274509807" green="0.89411764705882357" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
