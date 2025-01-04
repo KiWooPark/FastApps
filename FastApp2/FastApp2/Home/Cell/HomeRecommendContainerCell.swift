@@ -5,6 +5,7 @@ import UIKit
 
 protocol HomeRecommendContainerCellDelegate: AnyObject {
     func homeRecommendContainerCell(_ cell: HomeRecommendContainerCell, didSelectItemAt index: Int)
+    func homeRecommendContainerCellFoldChanged(_ cell: HomeRecommendContainerCell)
 }
 
 class HomeRecommendContainerCell: UICollectionViewCell {
@@ -14,6 +15,7 @@ class HomeRecommendContainerCell: UICollectionViewCell {
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var foldButton: UIButton!
 
+    private var viewModel: HomeRecommendViewModel?
     weak var delegate: HomeRecommendContainerCellDelegate?
 
     static func height(viewModel: HomeRecommendViewModel) -> CGFloat {
@@ -37,7 +39,28 @@ class HomeRecommendContainerCell: UICollectionViewCell {
         )
     }
 
-    @IBAction func foldBtnTapped(_: Any) {}
+    @IBAction func foldBtnTapped(_: Any) {
+        self.viewModel?.toggleFoldState()
+        self.delegate?.homeRecommendContainerCellFoldChanged(self)
+    }
+    
+    func setViewModel(_ viewModel: HomeRecommendViewModel) {
+        self.viewModel = viewModel
+        self.setButtonImage(viewModel.isFolded)
+        self.tableView.reloadData() // 아이템 받아와서 새로고침
+        
+        // 버튼 클로저 등록
+        self.viewModel?.foldChanged = { [weak self] isFolded in
+            self?.setButtonImage(isFolded)
+            self?.tableView.reloadData()
+        }
+    }
+    
+    // 이 클래스 내부에서만 사용하므로 private
+    private func setButtonImage(_ isFolded: Bool) {
+        let imageName: String = isFolded ? "unfold" : "fold"
+        self.foldButton.setImage(UIImage(named: imageName), for: .normal)
+    }
 }
 
 extension HomeRecommendContainerCell: UITableViewDelegate {
@@ -48,7 +71,7 @@ extension HomeRecommendContainerCell: UITableViewDelegate {
 
 extension HomeRecommendContainerCell: UITableViewDataSource {
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return 5
+        return viewModel?.itemCount ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

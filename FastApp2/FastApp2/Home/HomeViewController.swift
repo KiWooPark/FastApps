@@ -190,6 +190,11 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .recommend:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecommendContainerCell.identifier, for: indexPath)
+            
+            if let cell = cell as? HomeRecommendContainerCell {
+                cell.delegate = self
+                cell.setViewModel(self.homeViewModel.recommendViewModel)
+            }
             return cell
         }
     }
@@ -232,6 +237,10 @@ extension HomeViewController: HomeRankingContainerCellDelegate {
 }
 
 extension HomeViewController: HomeRecommendContainerCellDelegate {
+    func homeRecommendContainerCellFoldChanged(_ cell: HomeRecommendContainerCell) {
+        self.videoCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     func homeRecommendContainerCell(_ cell: HomeRecommendContainerCell, didSelectItemAt index: Int) {
         print("home recomend cell did select item at \(index)")
     }
