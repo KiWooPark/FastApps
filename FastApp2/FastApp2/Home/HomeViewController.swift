@@ -13,6 +13,13 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.setupVideoCollectionView()
+        
+        self.homeViewModel.dataChanged = { [weak self] in
+            self?.videoCollectionView.isHidden = false
+            self?.videoCollectionView.reloadData()
+        }
+        
+        self.homeViewModel.requestData()
     }
 
     func setupVideoCollectionView() {
@@ -181,6 +188,11 @@ extension HomeViewController: UICollectionViewDataSource {
             return UICollectionViewCell()
         case .video:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeVideoCell.identifire, for: indexPath)
+            
+            if let cell = cell as? HomeVideoCell, let data = self.homeViewModel.homeModel?.videos[indexPath.item] {
+                cell.setData(data)
+            }
+            
             return cell
         case .ranking:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingContainerCell.identifier, for: indexPath)
