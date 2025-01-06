@@ -31,8 +31,20 @@ class HomeVideoCell: UICollectionViewCell {
         containerView.layer.borderWidth = 1
     }
     
-    func setData(_ data: Home.Video) {
+    override func prepareForReuse() {
+        super.prepareForReuse()
         
+        self.thumbnailTask?.cancel()
+        self.thumbnailTask = nil
+        self.channelThumbnailTask?.cancel()
+        self.channelThumbnailTask = nil
+
+        self.thumbnailImageView.image = nil
+        self.channelImageView.image = nil
+        
+    }
+    
+    func setData(_ data: Home.Video) {
         thumbnailTask = self.thumbnailImageView.loadImage(url: data.imageUrl)
         channelThumbnailTask = self.channelImageView.loadImage(url: data.channelThumbnailURL)
     }

@@ -75,6 +75,11 @@ extension HomeRecommendContainerCell: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return tableView.dequeueReusableCell(withIdentifier: VideoListItemCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: VideoListItemCell.identifier, for: indexPath)
+        
+        if let cell = cell as? VideoListItemCell, let data = self.viewModel?.recommends?[indexPath.item] {
+            cell.setData(data, rank: indexPath.row + 1)
+        }
+        return cell
     }
 }

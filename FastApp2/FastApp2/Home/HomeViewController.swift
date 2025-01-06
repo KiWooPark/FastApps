@@ -14,12 +14,16 @@ class HomeViewController: UIViewController {
 
         self.setupVideoCollectionView()
         
+        self.bindViewModel()
+        
+        self.homeViewModel.requestData()
+    }
+    
+    private func bindViewModel() {
         self.homeViewModel.dataChanged = { [weak self] in
             self?.videoCollectionView.isHidden = false
             self?.videoCollectionView.reloadData()
         }
-        
-        self.homeViewModel.requestData()
     }
 
     func setupVideoCollectionView() {

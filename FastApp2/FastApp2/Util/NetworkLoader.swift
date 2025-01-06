@@ -9,6 +9,13 @@ import Foundation
 
 enum NetworkLoader {
     private static let session: URLSession = .shared
+    
+    enum NetworkLoaderError: Error {
+        case invalidURL
+        case noData
+        case decodingFailed
+        case requestFailed(Error)
+    }
 
     // 제네릭을 사용해서 범용적으로 사용
     static func loadData<T: Decodable>(url: String, for type: T.Type) async throws -> T {
@@ -21,13 +28,7 @@ enum NetworkLoader {
         
         return try jsonDecoder.decode(T.self, from: data)
     }
-    
-    enum NetworkLoaderError: Error {
-        case invalidURL
-        case noData
-        case decodingFailed
-        case requestFailed(Error)
-    }
+
     
     static func loadImageData(from url: URL) async throws -> Data {
         let (data, response) = try await session.data(for: .init(url: url))

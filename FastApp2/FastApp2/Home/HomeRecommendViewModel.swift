@@ -16,18 +16,7 @@ class HomeRecommendViewModel {
     }
     
     var foldChanged: ((Bool) -> Void)?
-    var recommends: [VideoListItem]? = [
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 1),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 2),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 3),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 4),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 5),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 6),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 7),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 8),
-    VideoListItem(imageUrl: nil, title: "1", playtime: 90, channel: "추천 채널", videoId: 9)
-    ]
-    
+    var recommends: [VideoListItem]? = []
     var itemCount: Int {
         let count = self.isFolded ? 5 : self.recommends?.count ?? 0
         
