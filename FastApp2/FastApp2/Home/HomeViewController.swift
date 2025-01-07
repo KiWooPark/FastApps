@@ -25,6 +25,11 @@ class HomeViewController: UIViewController {
             self?.videoCollectionView.reloadData()
         }
     }
+    
+    private func presentVideoViewController() {
+        let vc = VideoViewController()
+        self.present(vc, animated: true)
+    }
 
     func setupVideoCollectionView() {
         // 헤더 뷰
@@ -200,6 +205,10 @@ extension HomeViewController: UICollectionViewDataSource {
             return cell
         case .ranking:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRankingContainerCell.identifier, for: indexPath)
+            
+            if let cell = cell as? HomeRankingContainerCell, let data = self.homeViewModel.homeModel?.rankings {
+                cell.delegate = self
+            }
             return cell
         case .recentWatch:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HomeRecentWatchContainerCell.identifier, for: indexPath)
@@ -244,11 +253,24 @@ extension HomeViewController: UICollectionViewDataSource {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {}
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let section = HomeSection(rawValue: indexPath.section) else {
+            return
+        }
+        
+        switch section {
+        case .header, .footer, .ranking, .recentWatch, .recommend:
+            return
+        case .video:
+            self.presentVideoViewController()
+        }
+    }
+}
 
 extension HomeViewController: HomeRankingContainerCellDelegate {
     func homeRankingContainerCell(_ cell: HomeRankingContainerCell, didSelectItemAt index: Int) {
-        print("home Ranking did select at \(index)")
+        self.presentVideoViewController()
     }
 }
 
@@ -258,12 +280,12 @@ extension HomeViewController: HomeRecommendContainerCellDelegate {
     }
     
     func homeRecommendContainerCell(_ cell: HomeRecommendContainerCell, didSelectItemAt index: Int) {
-        print("home recomend cell did select item at \(index)")
+        self.presentVideoViewController()
     }
 }
 
 extension HomeViewController: HomeRecentWatchContainerCellDelegate {
     func homeRecentWatchContainerCell(_ cell: HomeRecentWatchContainerCell, didSelectItemAt index: Int) {
-        print("home recent watch did select at \(index)")
+        self.presentVideoViewController()
     }
 }

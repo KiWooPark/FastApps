@@ -43,6 +43,8 @@
 		16688DC52D27D39E000025B0 /* HomeRecommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16688DC42D27D39E000025B0 /* HomeRecommendViewModel.swift */; };
 		16688DC82D28EF2E000025B0 /* NetworkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16688DC72D28EF2E000025B0 /* NetworkLoader.swift */; };
 		16688DCA2D2BD1C3000025B0 /* UIImageView+Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16688DC92D2BD1C3000025B0 /* UIImageView+Task.swift */; };
+		16688DD32D2CF161000025B0 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16688DD12D2CF161000025B0 /* VideoViewController.swift */; };
+		16688DD42D2CF161000025B0 /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16688DD22D2CF161000025B0 /* VideoViewController.xib */; };
 		1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */; };
 		1690CE202D26801800989A1A /* HomeRankingContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */; };
 		1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */; };
@@ -92,6 +94,8 @@
 		16688DC42D27D39E000025B0 /* HomeRecommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRecommendViewModel.swift; sourceTree = "<group>"; };
 		16688DC72D28EF2E000025B0 /* NetworkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoader.swift; sourceTree = "<group>"; };
 		16688DC92D2BD1C3000025B0 /* UIImageView+Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Task.swift"; sourceTree = "<group>"; };
+		16688DD12D2CF161000025B0 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
+		16688DD22D2CF161000025B0 /* VideoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 		1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
 		1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
 		1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
@@ -140,6 +144,8 @@
 				16688DB42D27B2D0000025B0 /* JSON */,
 				1606131C2D071396002C5707 /* Login */,
 				1606131D2D071521002C5707 /* Home */,
+				16688DD02D2CF152000025B0 /* Video */,
+				16149A702D2D0DB800F885EF /* More */,
 				160613082D070140002C5707 /* AppDelegate.swift */,
 				1606130A2D070140002C5707 /* SceneDelegate.swift */,
 				1606130E2D070140002C5707 /* Main.storyboard */,
@@ -188,6 +194,13 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		16149A702D2D0DB800F885EF /* More */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = More;
+			sourceTree = "<group>";
+		};
 		16688DA82D27B1EE000025B0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +239,15 @@
 				16688DC92D2BD1C3000025B0 /* UIImageView+Task.swift */,
 			);
 			path = Util;
+			sourceTree = "<group>";
+		};
+		16688DD02D2CF152000025B0 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				16688DD12D2CF161000025B0 /* VideoViewController.swift */,
+				16688DD22D2CF161000025B0 /* VideoViewController.xib */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		1690CE1A2D267FE300989A1A /* Ranking */ = {
@@ -322,6 +344,7 @@
 				16688DB72D27B33D000025B0 /* bookmark.json in Resources */,
 				164C7D0B2D15706F007E2F18 /* HomeRecommendContainerCell.xib in Resources */,
 				16688DB92D27B349000025B0 /* favorite.json in Resources */,
+				16688DD42D2CF161000025B0 /* VideoViewController.xib in Resources */,
 				1690CE202D26801800989A1A /* HomeRankingContainerCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,6 +396,7 @@
 				1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */,
 				164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */,
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,
+				16688DD32D2CF161000025B0 /* VideoViewController.swift in Sources */,
 				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
 				160613232D0715D5002C5707 /* HomeVideoCell.swift in Sources */,
 				1606131F2D071532002C5707 /* HomeViewController.swift in Sources */,

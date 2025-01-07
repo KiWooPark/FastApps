@@ -36,6 +36,9 @@ class VideoListItemCell: UITableViewCell {
         self.rankLabel.layer.cornerRadius = 5
         self.rankLabel.clipsToBounds = true
         self.playTimeBGView.layer.cornerRadius = 3
+        
+        // 얘 없으면 배경 적용 안됨
+        self.backgroundConfiguration = .clear()
     }
 
     override func prepareForReuse() {
