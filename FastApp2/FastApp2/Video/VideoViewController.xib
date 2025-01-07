@@ -36,7 +36,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
                             <color key="backgroundColor" name="d-text-deep"/>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45e-Uf-HeI">
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="45e-Uf-HeI">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="221"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lyt-NA-c5f">
@@ -313,7 +313,7 @@
                     </subviews>
                     <constraints>
                         <constraint firstItem="EEj-0b-GUz" firstAttribute="top" secondItem="IzK-nZ-PK5" secondAttribute="top" id="7kX-gb-aUz"/>
-                        <constraint firstAttribute="bottom" secondItem="EEj-0b-GUz" secondAttribute="bottom" constant="362" id="I2c-ma-hck"/>
+                        <constraint firstAttribute="bottom" secondItem="EEj-0b-GUz" secondAttribute="bottom" id="I2c-ma-hck"/>
                         <constraint firstItem="EEj-0b-GUz" firstAttribute="width" secondItem="DGf-IB-qQJ" secondAttribute="width" id="YFk-Zj-EqQ"/>
                         <constraint firstItem="EEj-0b-GUz" firstAttribute="width" secondItem="Rp8-gZ-zN1" secondAttribute="width" id="hGC-67-0fD"/>
                         <constraint firstItem="Rp8-gZ-zN1" firstAttribute="trailing" secondItem="EEj-0b-GUz" secondAttribute="trailing" id="lHB-8f-6A2"/>

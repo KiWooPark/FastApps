@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MoreViewController" customModule="FastAPP2" customModuleProvider="target">
+            <connections>
+                <outlet property="headerView" destination="Efg-f2-EdK" id="N2A-gS-gzx"/>
+                <outlet property="settingTableView" destination="XuB-b5-Iux" id="uPS-3a-gBS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XuB-b5-Iux">
+                    <rect key="frame" x="0.0" y="619" width="393" height="233"/>
+                    <color key="backgroundColor" name="bg"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="233" id="0Dq-8q-Yqb"/>
+                    </constraints>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Efg-f2-EdK">
+                    <rect key="frame" x="0.0" y="573" width="393" height="46"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="설정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Sh-gK-Dbm">
+                            <rect key="frame" x="172.33333333333334" y="14.666666666666629" width="48.666666666666657" height="17"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                            <color key="textColor" name="main-wh"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rUU-hf-bfa">
+                            <rect key="frame" x="332" y="3" width="40" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="CbP-8n-kbW"/>
+                                <constraint firstAttribute="width" constant="40" id="n6f-Wq-gDu"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="small_close"/>
+                            <connections>
+                                <action selector="closeBtnTapped:" destination="-1" eventType="touchUpInside" id="vUi-Qj-1we"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="bg"/>
+                    <constraints>
+                        <constraint firstItem="8Sh-gK-Dbm" firstAttribute="centerY" secondItem="Efg-f2-EdK" secondAttribute="centerY" id="2e1-jQ-5a7"/>
+                        <constraint firstItem="rUU-hf-bfa" firstAttribute="centerY" secondItem="Efg-f2-EdK" secondAttribute="centerY" id="SPE-WS-G9l"/>
+                        <constraint firstAttribute="height" constant="46" id="W3h-dd-xtG"/>
+                        <constraint firstAttribute="trailing" secondItem="rUU-hf-bfa" secondAttribute="trailing" constant="21" id="W8z-u2-WYd"/>
+                        <constraint firstItem="8Sh-gK-Dbm" firstAttribute="centerX" secondItem="Efg-f2-EdK" secondAttribute="centerX" id="mJ4-Rk-Zg4"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="bg-controlpannel"/>
+            <constraints>
+                <constraint firstItem="Efg-f2-EdK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="22h-fu-555"/>
+                <constraint firstItem="XuB-b5-Iux" firstAttribute="top" secondItem="Efg-f2-EdK" secondAttribute="bottom" id="7yZ-bC-mIR"/>
+                <constraint firstItem="XuB-b5-Iux" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9Tr-z2-1mP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Efg-f2-EdK" secondAttribute="trailing" id="bQs-Zz-8Gg"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XuB-b5-Iux" secondAttribute="trailing" id="o8B-9E-5eD"/>
+                <constraint firstAttribute="bottom" secondItem="XuB-b5-Iux" secondAttribute="bottom" id="ovB-qy-qd8"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="-12"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="small_close" width="26" height="26"/>
+        <namedColor name="bg">
+            <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bg-controlpannel">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="main-wh">
+            <color red="0.99607843137254903" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

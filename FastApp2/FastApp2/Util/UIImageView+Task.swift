@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 extension UIImageView {
+    
+    @discardableResult
     func loadImage(url: URL) -> Task<Void, Never> {
         let task = Task {
             do {
