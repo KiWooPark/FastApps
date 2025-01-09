@@ -20,15 +20,6 @@ class VideoListItemCell: UITableViewCell {
 
     private var imageTask: Task<Void, Never>?
 
-    private static let timeFormatter: DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .positional
-        formatter.zeroFormattingBehavior = .pad
-        formatter.allowedUnits = [.minute, .second]
-
-        return formatter
-    }()
-
     override func awakeFromNib() {
         super.awakeFromNib()
 
@@ -60,7 +51,7 @@ class VideoListItemCell: UITableViewCell {
 
         self.titleLabel.text = data.title
         self.descriptionLabel.text = data.channel
-        self.playTimeLabel.text = Self.timeFormatter.string(from: data.playtime)
+        self.playTimeLabel.text = DateComponentsFormatter.playTimeFormatter.string(from: data.playtime)
         self.imageTask = self.thumbnailImageView.loadImage(url: data.imageUrl)
     }
 }
