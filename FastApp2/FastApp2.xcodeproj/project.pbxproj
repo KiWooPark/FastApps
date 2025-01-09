@@ -18,7 +18,7 @@
 		160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 160613222D0715D5002C5707 /* HomeVideoCell.xib */; };
 		160613262D072D54002C5707 /* HomeSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160613252D072D54002C5707 /* HomeSection.swift */; };
 		160613282D07304F002C5707 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160613272D07304F002C5707 /* TabBarController.swift */; };
-		1612AC8C2D22BC14004E398F /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1612AC8B2D22BC14004E398F /* .swiftlint.yml */; };
+		1610963D2D2FC43D0015B230 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1610963C2D2FC43D0015B230 /* .swiftlint.yml */; };
 		16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149A712D2D0DFD00F885EF /* MoreViewController.swift */; };
 		16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16149A722D2D0DFD00F885EF /* MoreViewController.xib */; };
 		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
@@ -52,6 +52,7 @@
 		1677D9652D2D126500323461 /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677D9642D2D126500323461 /* MoreViewModel.swift */; };
 		1677D9672D2D1BAB00323461 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677D9662D2D1BAB00323461 /* Video.swift */; };
 		1677D9692D2D1BE100323461 /* VideoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677D9682D2D1BE100323461 /* VideoViewModel.swift */; };
+		1677D96B2D2D2B2000323461 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1677D96A2D2D2B2000323461 /* PlayerView.swift */; };
 		1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */; };
 		1690CE202D26801800989A1A /* HomeRankingContainerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */; };
 		1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */; };
@@ -76,7 +77,7 @@
 		160613222D0715D5002C5707 /* HomeVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeVideoCell.xib; sourceTree = "<group>"; };
 		160613252D072D54002C5707 /* HomeSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSection.swift; sourceTree = "<group>"; };
 		160613272D07304F002C5707 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		1612AC8B2D22BC14004E398F /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; name = .swiftlint.yml; path = FastAPP2/Home/.swiftlint.yml; sourceTree = "<group>"; };
+		1610963C2D2FC43D0015B230 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		16149A712D2D0DFD00F885EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		16149A722D2D0DFD00F885EF /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -110,6 +111,7 @@
 		1677D9642D2D126500323461 /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		1677D9662D2D1BAB00323461 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		1677D9682D2D1BE100323461 /* VideoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewModel.swift; sourceTree = "<group>"; };
+		1677D96A2D2D2B2000323461 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		1690CE1D2D26801800989A1A /* HomeRankingContainerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingContainerCell.swift; sourceTree = "<group>"; };
 		1690CE1E2D26801800989A1A /* HomeRankingContainerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeRankingContainerCell.xib; sourceTree = "<group>"; };
 		1690CE212D26821C00989A1A /* HomeRankingItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRankingItemCell.swift; sourceTree = "<group>"; };
@@ -134,7 +136,7 @@
 		160612FC2D070140002C5707 = {
 			isa = PBXGroup;
 			children = (
-				1612AC8B2D22BC14004E398F /* .swiftlint.yml */,
+				1610963C2D2FC43D0015B230 /* .swiftlint.yml */,
 				160613072D070140002C5707 /* FastAPP2 */,
 				160613062D070140002C5707 /* Products */,
 			);
@@ -266,6 +268,7 @@
 				16688DD12D2CF161000025B0 /* VideoViewController.swift */,
 				16688DD22D2CF161000025B0 /* VideoViewController.xib */,
 				1677D9682D2D1BE100323461 /* VideoViewModel.swift */,
+				1677D96A2D2D2B2000323461 /* PlayerView.swift */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -355,7 +358,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1612AC8C2D22BC14004E398F /* .swiftlint.yml in Resources */,
 				160613152D070141002C5707 /* LaunchScreen.storyboard in Resources */,
 				160613122D070141002C5707 /* Assets.xcassets in Resources */,
 				164C7D052D157046007E2F18 /* VideoListItemCell.xib in Resources */,
@@ -366,6 +368,7 @@
 				1690CE282D26883600989A1A /* HomeRecentWatchContainerCell.xib in Resources */,
 				160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */,
 				160613102D070140002C5707 /* Main.storyboard in Resources */,
+				1610963D2D2FC43D0015B230 /* .swiftlint.yml in Resources */,
 				1690CE2C2D26898400989A1A /* HomeRecentWatchItemCell.xib in Resources */,
 				16688DBB2D27B355000025B0 /* home.json in Resources */,
 				16688DC32D27C7A9000025B0 /* HomeRankingHeaderView.xib in Resources */,
@@ -400,7 +403,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/usr/local/bin\"\nif [ -x /usr/local/bin/swiftlint ]; then\n  /usr/local/bin/swiftlint lint $(find \"${SRCROOT}/FastAPP2\" -name \"*.swift\")\nelse\n  echo \"warning: SwiftLint not installed or not found at /usr/local/bin\"\nfi\n";
+			shellScript = "export PATH=\"$PATH:/usr/local/bin\"\nif [ -x /usr/local/bin/swiftlint ]; then\n  /usr/local/bin/swiftlint lint --config \"${SRCROOT}/.swiftlint.yml\" $(find \"${SRCROOT}/FastAPP2\" -name \"*.swift\")\nelse\n  echo \"warning: SwiftLint not installed or not found at /usr/local/bin\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -428,6 +431,7 @@
 				1690CE272D26883600989A1A /* HomeRecentWatchContainerCell.swift in Sources */,
 				16688DB32D27B295000025B0 /* VideoListItem.swift in Sources */,
 				1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */,
+				1677D96B2D2D2B2000323461 /* PlayerView.swift in Sources */,
 				164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */,
 				1677D9672D2D1BAB00323461 /* Video.swift in Sources */,
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,

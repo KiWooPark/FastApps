@@ -10,6 +10,7 @@ import UIKit
 class VideoViewController: UIViewController {
     // MARK: - 제어 화면
 
+    @IBOutlet weak var playerView: PlayerView!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var portraitControlPannel: UIView!
 
@@ -33,7 +34,7 @@ class VideoViewController: UIViewController {
 
         return formatter
     }()
-    
+
     private var isControlPannelHidden: Bool = true {
         didSet {
             self.portraitControlPannel.isHidden = self.isControlPannelHidden
@@ -42,6 +43,8 @@ class VideoViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.playerView.delegatet = self
 
         self.channelThumnailImageView.layer.cornerRadius = 14
         self.setupRecommendTableView()
@@ -68,6 +71,9 @@ class VideoViewController: UIViewController {
     }
 
     private func setupData(_ video: Video) {
+        self.playerView.setVideo(url: video.videoURL)
+        self.playerView.play()
+
         self.titleLabel.text = video.title
         self.channelThumnailImageView.loadImage(url: video.channelImageUrl)
         self.channelNameLabel.text = video.channel
@@ -97,6 +103,60 @@ extension VideoViewController {
     }
 }
 
+extension VideoViewController {
+    @IBAction func toggleControlPannel(_ sender: Any) {
+        self.isControlPannelHidden.toggle()
+    }
+
+    @IBAction func closeBtnTapped(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+
+    @IBAction func rewindBtnTapped(_ sender: Any) {
+        self.playerView.rewind()
+    }
+
+    @IBAction func playBtnTapped(_ sender: Any) {
+        if self.playerView.isPlaying {
+            self.playerView.pause()
+        } else {
+            self.playerView.play()
+        }
+
+        self.updatePlayButton(isPlaying: self.playerView.isPlaying)
+    }
+
+    // 재생 상황에 따라 플레이 버튼 변경
+    private func updatePlayButton(isPlaying: Bool) {
+        let playImage = isPlaying ? UIImage(named: "small_pause") : UIImage(named: "small_play")
+        self.playButton.setImage(playImage, for: .normal)
+    }
+
+    @IBAction func fastForwardBtnTapped(_ sender: Any) {
+        self.playerView.forward()
+    }
+
+    @IBAction func moreBtnTapped(_ sender: Any) {
+        let moreVC = MoreViewController()
+        self.present(moreVC, animated: false)
+    }
+
+    @IBAction func expandBtnTapped(_ sender: Any) {}
+}
+
+extension VideoViewController: PlayerViewDeleagte {
+    func playerView(_ playerView: PlayerView, didPlay playTime: Double, playableTime: Double) {
+        self.updatePlayButton(isPlaying: playerView.isPlaying)
+    }
+
+    func playerViewReadyToPlay(_ playerView: PlayerView) {}
+
+    func playerViewDidFinishToPlay(_ playerView: PlayerView) {
+        self.playerView.seek(to: 0)
+        self.updatePlayButton(isPlaying: false)
+    }
+}
+
 extension VideoViewController: UITableViewDelegate {}
 
 extension VideoViewController: UITableViewDataSource {
@@ -115,27 +175,4 @@ extension VideoViewController: UITableViewDataSource {
 
         return cell
     }
-}
-
-extension VideoViewController {
-    @IBAction func toggleControlPannel(_ sender: Any) {
-        self.isControlPannelHidden.toggle()
-    }
-
-    @IBAction func closeBtnTapped(_ sender: Any) {
-        self.dismiss(animated: true)
-    }
-
-    @IBAction func rewindBtnTapped(_ sender: Any) {}
-
-    @IBAction func playBtnTapped(_ sender: Any) {}
-
-    @IBAction func fastForwardBtnTapped(_ sender: Any) {}
-
-    @IBAction func moreBtnTapped(_ sender: Any) {
-        let moreVC = MoreViewController()
-        self.present(moreVC, animated: false)
-    }
-
-    @IBAction func expandBtnTapped(_ sender: Any) {}
 }
