@@ -182,10 +182,25 @@ extension VideoViewController {
         self.present(moreVC, animated: false)
     }
 
-    @IBAction func expandBtnTapped(_ sender: Any) {}
+    @IBAction func expandBtnTapped(_ sender: Any) {
+        self.rotateScene(landscape: true)
+    }
     
     @IBAction func shrinkDidTap(_ sender: Any) {
-       
+        self.rotateScene(landscape: false)
+    }
+    
+    private func rotateScene(landscape: Bool) {
+        if #available(iOS 16.0, *) {
+            self.view.window?.windowScene?.requestGeometryUpdate(
+                .iOS(interfaceOrientations: landscape ? .landscapeRight : .portrait)
+            )
+        } else {
+            // 과거 가로 세로 전환 방법
+            let orientation: UIInterfaceOrientation = landscape ? .landscapeRight : .portrait
+            UIDevice.current.setValue(orientation.rawValue, forKey: "orientation")
+            UIViewController.attemptRotationToDeviceOrientation()
+        }
     }
 }
 

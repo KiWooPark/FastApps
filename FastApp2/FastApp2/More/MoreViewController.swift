@@ -33,6 +33,15 @@ class MoreViewController: UIViewController {
         self.setupConerRadius()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        
+        coordinator.animate { _ in
+            self.setupConerRadius()
+        }
+        
+        super.viewWillTransition(to: size, with: coordinator)
+    }
+    
     private func setupSettingTableView() {
         self.settingTableView.dataSource = self
         self.settingTableView.delegate = self
