@@ -21,6 +21,12 @@
 		1610963D2D2FC43D0015B230 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 1610963C2D2FC43D0015B230 /* .swiftlint.yml */; };
 		1610963F2D2FCFF20015B230 /* SeekbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610963E2D2FCFF20015B230 /* SeekbarView.swift */; };
 		161096422D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096412D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift */; };
+		161096452D2FE47B0015B230 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096442D2FE47B0015B230 /* MyViewController.swift */; };
+		161096492D2FE4940015B230 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096482D2FE4940015B230 /* FavoriteViewController.swift */; };
+		1610964B2D2FE4A10015B230 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610964A2D2FE4A10015B230 /* BookmarkViewController.swift */; };
+		1610964D2D2FE4DA0015B230 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */; };
+		1610964F2D2FE4E30015B230 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */; };
+		161096512D2FE6440015B230 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096502D2FE6440015B230 /* MyNavigationController.swift */; };
 		16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149A712D2D0DFD00F885EF /* MoreViewController.swift */; };
 		16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16149A722D2D0DFD00F885EF /* MoreViewController.xib */; };
 		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
@@ -82,6 +88,12 @@
 		1610963C2D2FC43D0015B230 /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		1610963E2D2FCFF20015B230 /* SeekbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekbarView.swift; sourceTree = "<group>"; };
 		161096412D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateComponentsFormatter+Ext.swift"; sourceTree = "<group>"; };
+		161096442D2FE47B0015B230 /* MyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewController.swift; sourceTree = "<group>"; };
+		161096482D2FE4940015B230 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		1610964A2D2FE4A10015B230 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
+		1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
+		161096502D2FE6440015B230 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		16149A712D2D0DFD00F885EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		16149A722D2D0DFD00F885EF /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -157,6 +169,7 @@
 		160613072D070140002C5707 /* FastAPP2 */ = {
 			isa = PBXGroup;
 			children = (
+				161096432D2FE4690015B230 /* My */,
 				160613272D07304F002C5707 /* TabBarController.swift */,
 				161096402D2FD6940015B230 /* Extensions */,
 				16688DC62D28EF14000025B0 /* Util */,
@@ -221,6 +234,35 @@
 				161096412D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		161096432D2FE4690015B230 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				161096472D2FE4810015B230 /* Favorite */,
+				161096462D2FE47F0015B230 /* Bookmark */,
+				161096442D2FE47B0015B230 /* MyViewController.swift */,
+				161096502D2FE6440015B230 /* MyNavigationController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		161096462D2FE47F0015B230 /* Bookmark */ = {
+			isa = PBXGroup;
+			children = (
+				1610964A2D2FE4A10015B230 /* BookmarkViewController.swift */,
+				1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */,
+			);
+			path = Bookmark;
+			sourceTree = "<group>";
+		};
+		161096472D2FE4810015B230 /* Favorite */ = {
+			isa = PBXGroup;
+			children = (
+				161096482D2FE4940015B230 /* FavoriteViewController.swift */,
+				1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */,
+			);
+			path = Favorite;
 			sourceTree = "<group>";
 		};
 		16149A702D2D0DB800F885EF /* More */ = {
@@ -429,11 +471,13 @@
 				16688DAF2D27B284000025B0 /* Bookmark.swift in Sources */,
 				1677D9652D2D126500323461 /* MoreViewModel.swift in Sources */,
 				1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */,
+				161096452D2FE47B0015B230 /* MyViewController.swift in Sources */,
 				1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */,
 				16688DC22D27C7A9000025B0 /* HomeRankingHeaderView.swift in Sources */,
 				1677D9622D2D118200323461 /* MoreTableViewCell.swift in Sources */,
 				1606130D2D070140002C5707 /* LoginViewController.swift in Sources */,
 				16688DCA2D2BD1C3000025B0 /* UIImageView+Task.swift in Sources */,
+				1610964F2D2FE4E30015B230 /* BookmarkViewModel.swift in Sources */,
 				164C7D0E2D15707F007E2F18 /* HomeHeaderView.swift in Sources */,
 				1610963F2D2FCFF20015B230 /* SeekbarView.swift in Sources */,
 				1677D9692D2D1BE100323461 /* VideoViewModel.swift in Sources */,
@@ -447,15 +491,19 @@
 				161096422D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift in Sources */,
 				16688DB32D27B295000025B0 /* VideoListItem.swift in Sources */,
 				1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */,
+				161096492D2FE4940015B230 /* FavoriteViewController.swift in Sources */,
 				1677D96B2D2D2B2000323461 /* PlayerView.swift in Sources */,
 				164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */,
 				1677D9672D2D1BAB00323461 /* Video.swift in Sources */,
+				1610964D2D2FE4DA0015B230 /* FavoriteViewModel.swift in Sources */,
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,
 				16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */,
 				16688DD32D2CF161000025B0 /* VideoViewController.swift in Sources */,
 				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
 				160613232D0715D5002C5707 /* HomeVideoCell.swift in Sources */,
+				161096512D2FE6440015B230 /* MyNavigationController.swift in Sources */,
 				1606131F2D071532002C5707 /* HomeViewController.swift in Sources */,
+				1610964B2D2FE4A10015B230 /* BookmarkViewController.swift in Sources */,
 				16688DC82D28EF2E000025B0 /* NetworkLoader.swift in Sources */,
 				164C7D042D157046007E2F18 /* VideoListItemCell.swift in Sources */,
 				164C7D122D15708C007E2F18 /* HomeFooterView.swift in Sources */,
