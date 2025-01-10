@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -467,11 +468,18 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="DGf-IB-qQJ"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="Rp8-gZ-zN1"/>
                 </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-Km-ZvN">
+                    <rect key="frame" x="0.0" y="280" width="393" height="538"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="bk-origin"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ibt-Km-ZvN" secondAttribute="trailing" id="5oP-Qh-mov"/>
+                <constraint firstItem="ibt-Km-ZvN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8hU-7j-97g"/>
                 <constraint firstAttribute="bottom" secondItem="X7d-0k-OnF" secondAttribute="bottom" constant="20" symbolic="YES" id="FfJ-Bh-nQv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ibt-Km-ZvN" secondAttribute="bottom" id="U5B-dZ-wzL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IzK-nZ-PK5" secondAttribute="trailing" id="Uzs-pj-MNr"/>
                 <constraint firstItem="X7d-0k-OnF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bCv-LX-F3Y"/>
                 <constraint firstAttribute="bottom" secondItem="IzK-nZ-PK5" secondAttribute="bottom" id="gOK-hi-wBk"/>
@@ -479,6 +487,7 @@
                 <constraint firstItem="IzK-nZ-PK5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xgX-x7-HHq"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="X7d-0k-OnF" secondAttribute="trailing" id="ytt-BA-qNf"/>
                 <constraint firstItem="IzK-nZ-PK5" firstAttribute="top" secondItem="X7d-0k-OnF" secondAttribute="bottom" id="zCK-VN-exM"/>
+                <constraint firstItem="ibt-Km-ZvN" firstAttribute="top" secondItem="X7d-0k-OnF" secondAttribute="bottom" id="zeB-e4-9iK"/>
             </constraints>
             <variation key="default">
                 <mask key="constraints">
@@ -542,5 +551,8 @@
         <namedColor name="text-gray">
             <color red="0.56470588235294117" green="0.56470588235294117" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

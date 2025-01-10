@@ -29,6 +29,11 @@
 		161096512D2FE6440015B230 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096502D2FE6440015B230 /* MyNavigationController.swift */; };
 		161096552D2FE7A50015B230 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096532D2FE7A50015B230 /* BookmarkCell.swift */; };
 		161096562D2FE7A50015B230 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161096542D2FE7A50015B230 /* BookmarkCell.xib */; };
+		161096592D30F3EB0015B230 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096582D30F3EB0015B230 /* LiveViewController.swift */; };
+		1610965D2D30F9720015B230 /* LiveCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610965B2D30F9720015B230 /* LiveCell.swift */; };
+		1610965E2D30F9720015B230 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1610965C2D30F9720015B230 /* LiveCell.xib */; };
+		161096602D30FBC50015B230 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610965F2D30FBC50015B230 /* LiveViewModel.swift */; };
+		161096622D3109BF0015B230 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096612D3109BF0015B230 /* Live.swift */; };
 		16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149A712D2D0DFD00F885EF /* MoreViewController.swift */; };
 		16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16149A722D2D0DFD00F885EF /* MoreViewController.xib */; };
 		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
@@ -98,6 +103,11 @@
 		161096502D2FE6440015B230 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
 		161096532D2FE7A50015B230 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
 		161096542D2FE7A50015B230 /* BookmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
+		161096582D30F3EB0015B230 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		1610965B2D30F9720015B230 /* LiveCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveCell.swift; sourceTree = "<group>"; };
+		1610965C2D30F9720015B230 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
+		1610965F2D30FBC50015B230 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
+		161096612D3109BF0015B230 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
 		16149A712D2D0DFD00F885EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		16149A722D2D0DFD00F885EF /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -173,6 +183,7 @@
 		160613072D070140002C5707 /* FastAPP2 */ = {
 			isa = PBXGroup;
 			children = (
+				161096572D30F3D60015B230 /* Live */,
 				161096432D2FE4690015B230 /* My */,
 				160613272D07304F002C5707 /* TabBarController.swift */,
 				161096402D2FD6940015B230 /* Extensions */,
@@ -279,6 +290,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		161096572D30F3D60015B230 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				1610965A2D30F95C0015B230 /* Cell */,
+				161096582D30F3EB0015B230 /* LiveViewController.swift */,
+				1610965F2D30FBC50015B230 /* LiveViewModel.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		1610965A2D30F95C0015B230 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1610965B2D30F9720015B230 /* LiveCell.swift */,
+				1610965C2D30F9720015B230 /* LiveCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		16149A702D2D0DB800F885EF /* More */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +328,7 @@
 				16688DB02D27B28D000025B0 /* Favorite.swift */,
 				16688DB22D27B295000025B0 /* VideoListItem.swift */,
 				1677D9662D2D1BAB00323461 /* Video.swift */,
+				161096612D3109BF0015B230 /* Live.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -441,6 +472,7 @@
 				160613102D070140002C5707 /* Main.storyboard in Resources */,
 				1610963D2D2FC43D0015B230 /* .swiftlint.yml in Resources */,
 				1690CE2C2D26898400989A1A /* HomeRecentWatchItemCell.xib in Resources */,
+				1610965E2D30F9720015B230 /* LiveCell.xib in Resources */,
 				16688DBB2D27B355000025B0 /* home.json in Resources */,
 				16688DC32D27C7A9000025B0 /* HomeRankingHeaderView.xib in Resources */,
 				164C7D0F2D15707F007E2F18 /* HomeHeaderView.xib in Resources */,
@@ -491,6 +523,7 @@
 				1690CE1F2D26801800989A1A /* HomeRankingContainerCell.swift in Sources */,
 				16688DC22D27C7A9000025B0 /* HomeRankingHeaderView.swift in Sources */,
 				1677D9622D2D118200323461 /* MoreTableViewCell.swift in Sources */,
+				161096622D3109BF0015B230 /* Live.swift in Sources */,
 				1606130D2D070140002C5707 /* LoginViewController.swift in Sources */,
 				16688DCA2D2BD1C3000025B0 /* UIImageView+Task.swift in Sources */,
 				1610964F2D2FE4E30015B230 /* BookmarkViewModel.swift in Sources */,
@@ -499,6 +532,7 @@
 				1677D9692D2D1BE100323461 /* VideoViewModel.swift in Sources */,
 				16688DB12D27B28D000025B0 /* Favorite.swift in Sources */,
 				16688DAD2D27B27B000025B0 /* Home.swift in Sources */,
+				161096592D30F3EB0015B230 /* LiveViewController.swift in Sources */,
 				160613092D070140002C5707 /* AppDelegate.swift in Sources */,
 				164C7D0A2D15706F007E2F18 /* HomeRecommendContainerCell.swift in Sources */,
 				160613262D072D54002C5707 /* HomeSection.swift in Sources */,
@@ -516,6 +550,8 @@
 				16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */,
 				16688DD32D2CF161000025B0 /* VideoViewController.swift in Sources */,
 				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
+				161096602D30FBC50015B230 /* LiveViewModel.swift in Sources */,
+				1610965D2D30F9720015B230 /* LiveCell.swift in Sources */,
 				160613232D0715D5002C5707 /* HomeVideoCell.swift in Sources */,
 				161096512D2FE6440015B230 /* MyNavigationController.swift in Sources */,
 				1606131F2D071532002C5707 /* HomeViewController.swift in Sources */,

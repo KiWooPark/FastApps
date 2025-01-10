@@ -101,21 +101,125 @@
             </objects>
             <point key="canvasLocation" x="2236" y="-798"/>
         </scene>
-        <!--View Controller-->
+        <!--Live View Controller-->
         <scene sceneID="KSj-VA-lbz">
             <objects>
-                <viewController id="omo-Ps-whB" sceneMemberID="viewController">
+                <viewController id="omo-Ps-whB" customClass="LiveViewController" customModule="FastAPP2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hNx-21-ko0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라이브 채널" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQ9-Up-fhg">
+                                <rect key="frame" x="30" y="89" width="333" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="main-wh"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDF-hL-4LN">
+                                <rect key="frame" x="16" y="155" width="361" height="578"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="svv-tR-3uK">
+                                        <rect key="frame" x="14" y="23" width="333" height="22"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP1-Dv-5SE">
+                                                <rect key="frame" x="268" y="0.0" width="65" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="방송 시작순">
+                                                    <color key="titleColor" name="gray-2"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" name="main-wh"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sortBtnTapped:" destination="omo-Ps-whB" eventType="touchUpInside" id="rrP-RH-Fwp"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BlR-MT-Ll2">
+                                                <rect key="frame" x="264" y="5" width="1" height="12"/>
+                                                <color key="backgroundColor" name="gray-2"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="8Hu-P9-TiX"/>
+                                                </constraints>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-QQ-G0m">
+                                                <rect key="frame" x="224" y="0.0" width="37" height="22"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="인기순">
+                                                    <color key="titleColor" name="gray-2"/>
+                                                </state>
+                                                <state key="selected">
+                                                    <color key="titleColor" name="main-wh"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sortBtnTapped:" destination="omo-Ps-whB" eventType="touchUpInside" id="2X0-re-hAL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="1dP-eN-zaH"/>
+                                            <constraint firstItem="BlR-MT-Ll2" firstAttribute="leading" secondItem="JAN-QQ-G0m" secondAttribute="trailing" constant="3" id="JgH-lU-aac"/>
+                                            <constraint firstAttribute="bottom" secondItem="BlR-MT-Ll2" secondAttribute="bottom" constant="5" id="K0T-K6-rbh"/>
+                                            <constraint firstItem="JAN-QQ-G0m" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svv-tR-3uK" secondAttribute="leading" id="LeS-Jz-nXA"/>
+                                            <constraint firstItem="hP1-Dv-5SE" firstAttribute="top" secondItem="svv-tR-3uK" secondAttribute="top" id="RNP-oc-suE"/>
+                                            <constraint firstAttribute="bottom" secondItem="JAN-QQ-G0m" secondAttribute="bottom" id="RZd-F3-Mw8"/>
+                                            <constraint firstItem="hP1-Dv-5SE" firstAttribute="leading" secondItem="BlR-MT-Ll2" secondAttribute="trailing" constant="3" id="U24-MB-YBJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="hP1-Dv-5SE" secondAttribute="trailing" id="Wsb-VY-i7x"/>
+                                            <constraint firstItem="BlR-MT-Ll2" firstAttribute="top" secondItem="svv-tR-3uK" secondAttribute="top" constant="5" id="h9B-U6-ZYH"/>
+                                            <constraint firstItem="JAN-QQ-G0m" firstAttribute="top" secondItem="svv-tR-3uK" secondAttribute="top" id="kMK-af-ZdL"/>
+                                            <constraint firstAttribute="bottom" secondItem="hP1-Dv-5SE" secondAttribute="bottom" id="yOS-xv-AO9"/>
+                                        </constraints>
+                                    </view>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dpv-UW-3v1">
+                                        <rect key="frame" x="14" y="78" width="333" height="481"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="G6x-SW-XJ6">
+                                            <size key="itemSize" width="128" height="128"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" name="bk-origin"/>
+                                <constraints>
+                                    <constraint firstItem="dpv-UW-3v1" firstAttribute="top" secondItem="svv-tR-3uK" secondAttribute="bottom" constant="33" id="Kea-OP-nCg"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpv-UW-3v1" secondAttribute="trailing" constant="14" id="U4x-ht-SOX"/>
+                                    <constraint firstItem="svv-tR-3uK" firstAttribute="top" secondItem="EDF-hL-4LN" secondAttribute="top" constant="23" id="dYR-dP-sZG"/>
+                                    <constraint firstAttribute="bottom" secondItem="dpv-UW-3v1" secondAttribute="bottom" constant="19" id="eox-PL-uaY"/>
+                                    <constraint firstItem="dpv-UW-3v1" firstAttribute="leading" secondItem="EDF-hL-4LN" secondAttribute="leading" constant="14" id="oo0-RK-xCW"/>
+                                    <constraint firstAttribute="trailing" secondItem="svv-tR-3uK" secondAttribute="trailing" constant="14" id="r3Q-18-I1r"/>
+                                    <constraint firstItem="svv-tR-3uK" firstAttribute="leading" secondItem="EDF-hL-4LN" secondAttribute="leading" constant="14" id="u44-XQ-OVN"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="flO-kC-PvJ"/>
                         <color key="backgroundColor" name="bg"/>
+                        <constraints>
+                            <constraint firstItem="EDF-hL-4LN" firstAttribute="leading" secondItem="flO-kC-PvJ" secondAttribute="leading" constant="16" id="UXy-cx-UjD"/>
+                            <constraint firstItem="flO-kC-PvJ" firstAttribute="trailing" secondItem="DQ9-Up-fhg" secondAttribute="trailing" constant="30" id="aAv-mA-9ig"/>
+                            <constraint firstItem="DQ9-Up-fhg" firstAttribute="top" secondItem="flO-kC-PvJ" secondAttribute="top" constant="30" id="awg-Wh-C29"/>
+                            <constraint firstItem="flO-kC-PvJ" firstAttribute="bottom" secondItem="EDF-hL-4LN" secondAttribute="bottom" constant="36" id="e1D-PE-jsN"/>
+                            <constraint firstItem="flO-kC-PvJ" firstAttribute="trailing" secondItem="EDF-hL-4LN" secondAttribute="trailing" constant="16" id="hXi-6D-Cmi"/>
+                            <constraint firstItem="DQ9-Up-fhg" firstAttribute="leading" secondItem="flO-kC-PvJ" secondAttribute="leading" constant="30" id="m7V-pn-nM4"/>
+                            <constraint firstItem="EDF-hL-4LN" firstAttribute="top" secondItem="DQ9-Up-fhg" secondAttribute="bottom" constant="45" id="xEg-rs-faa"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabIcon_live" selectedImage="tabIcon_live_selected" id="Z2Y-O9-PQv"/>
+                    <connections>
+                        <outlet property="collectionView" destination="dpv-UW-3v1" id="pDD-0z-W81"/>
+                        <outlet property="containerView" destination="EDF-hL-4LN" id="v3H-Cq-Fjt"/>
+                        <outlet property="favoriteButton" destination="JAN-QQ-G0m" id="7Ql-SB-dQB"/>
+                        <outlet property="startTimeButton" destination="hP1-Dv-5SE" id="Cez-Gd-n2j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiR-uB-mwu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2237" y="-35"/>
+            <point key="canvasLocation" x="2235.8778625954196" y="-35.211267605633807"/>
         </scene>
         <!--My Navigation Controller-->
         <scene sceneID="56B-IK-eEi">
@@ -348,6 +452,12 @@
         <image name="user" width="14" height="14"/>
         <namedColor name="bg">
             <color red="0.10588235294117647" green="0.10588235294117647" blue="0.10588235294117647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="bk-origin">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="gray-2">
+            <color red="0.65490196078431373" green="0.65490196078431373" blue="0.65490196078431373" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="icon-on">
             <color red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
