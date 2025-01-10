@@ -6,7 +6,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -14,6 +13,7 @@
             <connections>
                 <outlet property="channelNameLabel" destination="VYQ-LR-44c" id="kqg-nB-cXq"/>
                 <outlet property="channelThumnailImageView" destination="n7N-1q-trX" id="ruB-ej-r3c"/>
+                <outlet property="chattingView" destination="ibt-Km-ZvN" id="sDc-pW-gwk"/>
                 <outlet property="favoriteButton" destination="0p7-tv-vak" id="dGb-KZ-S1P"/>
                 <outlet property="landscapeControlPannel" destination="Ama-Ry-SgO" id="Zo6-nu-8vT"/>
                 <outlet property="landscapePlayButton" destination="irZ-YH-JkC" id="SF3-rp-bIh"/>
@@ -346,6 +346,9 @@
                                             <state key="normal" title="댓글" image="video_comment">
                                                 <color key="titleColor" name="main-wh"/>
                                             </state>
+                                            <connections>
+                                                <action selector="commentDidTap:" destination="-1" eventType="touchUpInside" id="eKb-ZT-Wwa"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Igs-hP-t3x">
                                             <rect key="frame" x="144" y="5.6666666666666856" width="56" height="17"/>
@@ -468,9 +471,85 @@
                     <viewLayoutGuide key="contentLayoutGuide" id="DGf-IB-qQJ"/>
                     <viewLayoutGuide key="frameLayoutGuide" id="Rp8-gZ-zN1"/>
                 </scrollView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-Km-ZvN">
-                    <rect key="frame" x="0.0" y="280" width="393" height="538"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibt-Km-ZvN" customClass="ChattingView" customModule="FastAPP2" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="280" width="393" height="572"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tFW-hF-5RE">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="67"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="라이브 채팅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ykj-Lb-hdE">
+                                    <rect key="frame" x="30" y="23" width="78" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                    <color key="textColor" name="main-wh"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwe-Ft-bkb">
+                                    <rect key="frame" x="323" y="13.666666666666686" width="40" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="40" id="05E-Fg-dP7"/>
+                                        <constraint firstAttribute="height" constant="40" id="E0g-jR-wkR"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="small_close"/>
+                                    <connections>
+                                        <action selector="closeBtnTapped:" destination="ibt-Km-ZvN" eventType="touchUpInside" id="vb8-e9-FqD"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="dwe-Ft-bkb" secondAttribute="trailing" constant="30" id="2yT-CV-Itn"/>
+                                <constraint firstItem="dwe-Ft-bkb" firstAttribute="centerY" secondItem="tFW-hF-5RE" secondAttribute="centerY" id="aov-6q-dNM"/>
+                                <constraint firstAttribute="height" constant="67" id="gZG-st-EyR"/>
+                                <constraint firstItem="Ykj-Lb-hdE" firstAttribute="leading" secondItem="tFW-hF-5RE" secondAttribute="leading" constant="30" id="ogv-ad-pYx"/>
+                                <constraint firstItem="Ykj-Lb-hdE" firstAttribute="centerY" secondItem="tFW-hF-5RE" secondAttribute="centerY" id="y9n-31-voc"/>
+                            </constraints>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="5yy-fo-GSK">
+                            <rect key="frame" x="0.0" y="67" width="393" height="391"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RkH-Es-HV5">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                        </collectionView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mOX-to-VKk">
+                            <rect key="frame" x="0.0" y="458" width="393" height="80"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KaE-5w-aNM">
+                                    <rect key="frame" x="25" y="7" width="343" height="34"/>
+                                    <color key="backgroundColor" name="chat-bg"/>
+                                    <color key="textColor" name="chat-text"/>
+                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="KaE-5w-aNM" firstAttribute="leading" secondItem="mOX-to-VKk" secondAttribute="leading" constant="25" id="4AB-bu-aXB"/>
+                                <constraint firstAttribute="trailing" secondItem="KaE-5w-aNM" secondAttribute="trailing" constant="25" id="LUw-yg-IjS"/>
+                                <constraint firstAttribute="height" constant="80" id="NCG-Wh-q2S"/>
+                                <constraint firstItem="KaE-5w-aNM" firstAttribute="top" secondItem="mOX-to-VKk" secondAttribute="top" constant="7" id="OIh-sQ-jws"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <viewLayoutGuide key="safeArea" id="hfN-5T-6WZ"/>
+                    <color key="backgroundColor" name="bk-origin"/>
+                    <constraints>
+                        <constraint firstItem="tFW-hF-5RE" firstAttribute="top" secondItem="ibt-Km-ZvN" secondAttribute="top" id="7Pd-a2-BGa"/>
+                        <constraint firstItem="tFW-hF-5RE" firstAttribute="leading" secondItem="ibt-Km-ZvN" secondAttribute="leading" id="7s3-aK-75w"/>
+                        <constraint firstAttribute="trailing" secondItem="tFW-hF-5RE" secondAttribute="trailing" id="9yZ-yu-Obp"/>
+                        <constraint firstItem="5yy-fo-GSK" firstAttribute="leading" secondItem="ibt-Km-ZvN" secondAttribute="leading" id="DMp-ZN-YiB"/>
+                        <constraint firstItem="mOX-to-VKk" firstAttribute="top" secondItem="5yy-fo-GSK" secondAttribute="bottom" id="E85-ae-eYQ"/>
+                        <constraint firstItem="5yy-fo-GSK" firstAttribute="top" secondItem="tFW-hF-5RE" secondAttribute="bottom" id="ON6-WN-sMm"/>
+                        <constraint firstItem="mOX-to-VKk" firstAttribute="leading" secondItem="ibt-Km-ZvN" secondAttribute="leading" id="qDY-or-mjB"/>
+                        <constraint firstAttribute="trailing" secondItem="5yy-fo-GSK" secondAttribute="trailing" id="won-cJ-qrH"/>
+                        <constraint firstAttribute="trailing" secondItem="mOX-to-VKk" secondAttribute="trailing" id="zTJ-89-q7A"/>
+                        <constraint firstItem="hfN-5T-6WZ" firstAttribute="bottom" secondItem="mOX-to-VKk" secondAttribute="bottom" id="zZ9-sn-Lqg"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="chattingCollectionView" destination="5yy-fo-GSK" id="4T2-tj-aOq"/>
+                        <outlet property="chattingTextField" destination="KaE-5w-aNM" id="VEO-Jq-yYM"/>
+                    </connections>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -479,7 +558,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ibt-Km-ZvN" secondAttribute="trailing" id="5oP-Qh-mov"/>
                 <constraint firstItem="ibt-Km-ZvN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8hU-7j-97g"/>
                 <constraint firstAttribute="bottom" secondItem="X7d-0k-OnF" secondAttribute="bottom" constant="20" symbolic="YES" id="FfJ-Bh-nQv"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ibt-Km-ZvN" secondAttribute="bottom" id="U5B-dZ-wzL"/>
+                <constraint firstAttribute="bottom" secondItem="ibt-Km-ZvN" secondAttribute="bottom" id="U5B-dZ-wzL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IzK-nZ-PK5" secondAttribute="trailing" id="Uzs-pj-MNr"/>
                 <constraint firstItem="X7d-0k-OnF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="bCv-LX-F3Y"/>
                 <constraint firstAttribute="bottom" secondItem="IzK-nZ-PK5" secondAttribute="bottom" id="gOK-hi-wBk"/>
@@ -524,6 +603,12 @@
         <namedColor name="bk-origin">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="chat-bg">
+            <color red="0.19215686274509805" green="0.19215686274509805" blue="0.19215686274509805" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="chat-text">
+            <color red="0.59607843137254901" green="0.59607843137254901" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="d-text-deep">
             <color red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -551,8 +636,5 @@
         <namedColor name="text-gray">
             <color red="0.56470588235294117" green="0.56470588235294117" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

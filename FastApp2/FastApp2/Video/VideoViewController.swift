@@ -30,13 +30,15 @@ class VideoViewController: UIViewController {
     @IBOutlet weak var landscapePlayButton: UIButton!
     @IBOutlet weak var landscapePlayTimeLabel: UILabel!
     
-    
+    @IBOutlet weak var chattingView: ChattingView!
     
     @IBOutlet var playerViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
 
     private var contentSizeObservation: NSKeyValueObservation?
     private let viewModel = VideoViewModel()
+    
+    var isLiveMode: Bool = false
 
     private static let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -60,11 +62,15 @@ class VideoViewController: UIViewController {
 
         self.playerView.delegatet = self
         self.seekBarView.delegate = self
+        
+        self.chattingView.delegate = self
 
         self.channelThumnailImageView.layer.cornerRadius = 14
         self.setupRecommendTableView()
         self.bindViewModel()
         self.viewModel.request()
+        
+        self.chattingView.isHidden = !self.isLiveMode
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -190,6 +196,12 @@ extension VideoViewController {
         self.rotateScene(landscape: false)
     }
     
+    @IBAction func commentDidTap(_ sender: Any) {
+        if self.isLiveMode {
+            self.chattingView.isHidden = false
+        }
+    }
+    
     private func rotateScene(landscape: Bool) {
         if #available(iOS 16.0, *) {
             self.view.window?.windowScene?.requestGeometryUpdate(
@@ -257,5 +269,12 @@ extension VideoViewController: UITableViewDataSource {
         }
 
         return cell
+    }
+}
+
+extension VideoViewController: ChattingViewDeleagte {
+    func liveChattingViewCloseTapped(_ chattingView: ChattingView) {
+        self.chattingView.isHidden = true
+        
     }
 }

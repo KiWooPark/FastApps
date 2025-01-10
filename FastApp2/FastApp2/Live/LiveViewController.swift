@@ -64,7 +64,13 @@ extension LiveViewController: UICollectionViewDelegateFlowLayout {
     }
 }
 
-extension LiveViewController: UICollectionViewDelegate {}
+extension LiveViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = VideoViewController()
+        vc.isLiveMode = true
+        self.present(vc, animated: true)
+    }
+}
 
 extension LiveViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

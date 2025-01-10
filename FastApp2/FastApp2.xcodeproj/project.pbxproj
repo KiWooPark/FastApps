@@ -34,6 +34,13 @@
 		1610965E2D30F9720015B230 /* LiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1610965C2D30F9720015B230 /* LiveCell.xib */; };
 		161096602D30FBC50015B230 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610965F2D30FBC50015B230 /* LiveViewModel.swift */; };
 		161096622D3109BF0015B230 /* Live.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096612D3109BF0015B230 /* Live.swift */; };
+		161096652D3110C20015B230 /* ChattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096642D3110C20015B230 /* ChattingView.swift */; };
+		161096672D3111400015B230 /* ChatSimulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096662D3111400015B230 /* ChatSimulator.swift */; };
+		161096692D3111600015B230 /* ChattingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096682D3111600015B230 /* ChattingViewModel.swift */; };
+		1610966D2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610966B2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.swift */; };
+		1610966E2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1610966C2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.xib */; };
+		161096712D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610966F2D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.swift */; };
+		161096722D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161096702D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.xib */; };
 		16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149A712D2D0DFD00F885EF /* MoreViewController.swift */; };
 		16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16149A722D2D0DFD00F885EF /* MoreViewController.xib */; };
 		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
@@ -108,6 +115,13 @@
 		1610965C2D30F9720015B230 /* LiveCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveCell.xib; sourceTree = "<group>"; };
 		1610965F2D30FBC50015B230 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
 		161096612D3109BF0015B230 /* Live.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Live.swift; sourceTree = "<group>"; };
+		161096642D3110C20015B230 /* ChattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingView.swift; sourceTree = "<group>"; };
+		161096662D3111400015B230 /* ChatSimulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatSimulator.swift; sourceTree = "<group>"; };
+		161096682D3111600015B230 /* ChattingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChattingViewModel.swift; sourceTree = "<group>"; };
+		1610966B2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChattingMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		1610966C2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveChattingMessageCollectionViewCell.xib; sourceTree = "<group>"; };
+		1610966F2D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveChattingMyMessageCollectionViewCell.swift; sourceTree = "<group>"; };
+		161096702D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveChattingMyMessageCollectionViewCell.xib; sourceTree = "<group>"; };
 		16149A712D2D0DFD00F885EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		16149A722D2D0DFD00F885EF /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -183,6 +197,7 @@
 		160613072D070140002C5707 /* FastAPP2 */ = {
 			isa = PBXGroup;
 			children = (
+				161096632D31109B0015B230 /* LiveChatting */,
 				161096572D30F3D60015B230 /* Live */,
 				161096432D2FE4690015B230 /* My */,
 				160613272D07304F002C5707 /* TabBarController.swift */,
@@ -305,6 +320,28 @@
 			children = (
 				1610965B2D30F9720015B230 /* LiveCell.swift */,
 				1610965C2D30F9720015B230 /* LiveCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		161096632D31109B0015B230 /* LiveChatting */ = {
+			isa = PBXGroup;
+			children = (
+				1610966A2D31116C0015B230 /* Cell */,
+				161096662D3111400015B230 /* ChatSimulator.swift */,
+				161096642D3110C20015B230 /* ChattingView.swift */,
+				161096682D3111600015B230 /* ChattingViewModel.swift */,
+			);
+			path = LiveChatting;
+			sourceTree = "<group>";
+		};
+		1610966A2D31116C0015B230 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1610966B2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.swift */,
+				1610966C2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.xib */,
+				1610966F2D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.swift */,
+				161096702D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -465,6 +502,7 @@
 				16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */,
 				1690CE242D26821C00989A1A /* HomeRankingItemCell.xib in Resources */,
 				164C7D132D15708C007E2F18 /* HomeFooterView.xib in Resources */,
+				161096722D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.xib in Resources */,
 				16688DBD2D27B363000025B0 /* live.json in Resources */,
 				161096562D2FE7A50015B230 /* BookmarkCell.xib in Resources */,
 				1690CE282D26883600989A1A /* HomeRecentWatchContainerCell.xib in Resources */,
@@ -473,6 +511,7 @@
 				1610963D2D2FC43D0015B230 /* .swiftlint.yml in Resources */,
 				1690CE2C2D26898400989A1A /* HomeRecentWatchItemCell.xib in Resources */,
 				1610965E2D30F9720015B230 /* LiveCell.xib in Resources */,
+				1610966E2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.xib in Resources */,
 				16688DBB2D27B355000025B0 /* home.json in Resources */,
 				16688DC32D27C7A9000025B0 /* HomeRankingHeaderView.xib in Resources */,
 				164C7D0F2D15707F007E2F18 /* HomeHeaderView.xib in Resources */,
@@ -515,7 +554,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				161096692D3111600015B230 /* ChattingViewModel.swift in Sources */,
 				16688DAF2D27B284000025B0 /* Bookmark.swift in Sources */,
+				161096672D3111400015B230 /* ChatSimulator.swift in Sources */,
 				161096552D2FE7A50015B230 /* BookmarkCell.swift in Sources */,
 				1677D9652D2D126500323461 /* MoreViewModel.swift in Sources */,
 				1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */,
@@ -535,11 +576,13 @@
 				161096592D30F3EB0015B230 /* LiveViewController.swift in Sources */,
 				160613092D070140002C5707 /* AppDelegate.swift in Sources */,
 				164C7D0A2D15706F007E2F18 /* HomeRecommendContainerCell.swift in Sources */,
+				1610966D2D31118D0015B230 /* LiveChattingMessageCollectionViewCell.swift in Sources */,
 				160613262D072D54002C5707 /* HomeSection.swift in Sources */,
 				16688DAB2D27B217000025B0 /* APIEndpoints.swift in Sources */,
 				1690CE272D26883600989A1A /* HomeRecentWatchContainerCell.swift in Sources */,
 				161096422D2FD6A90015B230 /* DateComponentsFormatter+Ext.swift in Sources */,
 				16688DB32D27B295000025B0 /* VideoListItem.swift in Sources */,
+				161096712D31119D0015B230 /* LiveChattingMyMessageCollectionViewCell.swift in Sources */,
 				1690CE2B2D26898400989A1A /* HomeRecentWatchItemCell.swift in Sources */,
 				161096492D2FE4940015B230 /* FavoriteViewController.swift in Sources */,
 				1677D96B2D2D2B2000323461 /* PlayerView.swift in Sources */,
@@ -549,6 +592,7 @@
 				1606130B2D070140002C5707 /* SceneDelegate.swift in Sources */,
 				16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */,
 				16688DD32D2CF161000025B0 /* VideoViewController.swift in Sources */,
+				161096652D3110C20015B230 /* ChattingView.swift in Sources */,
 				160613282D07304F002C5707 /* TabBarController.swift in Sources */,
 				161096602D30FBC50015B230 /* LiveViewModel.swift in Sources */,
 				1610965D2D30F9720015B230 /* LiveCell.swift in Sources */,
