@@ -120,6 +120,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="contentLeadingConstraint" destination="tI3-GV-6GW" id="FOx-OG-Oiv"/>
                 <outlet property="descriptionLabel" destination="Sj8-jp-aCv" id="tbV-Tt-X6m"/>
                 <outlet property="playTimeBGView" destination="4oc-Wc-wen" id="wp0-g7-KUE"/>
                 <outlet property="playTimeLabel" destination="oWv-RV-RP3" id="IbC-fA-O7a"/>

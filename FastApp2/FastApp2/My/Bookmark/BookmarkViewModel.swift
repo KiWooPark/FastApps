@@ -8,10 +8,9 @@
 import Foundation
 
 @MainActor class BookmarkViewModel {
-    
     private(set) var channels: [Bookmark.Item]?
     var dataChanged: (() -> Void)?
-    
+
     func request() {
         Task {
             do {
@@ -21,8 +20,6 @@ import Foundation
             } catch {
                 print("bookmark list load failed: \(error.localizedDescription)")
             }
-            
         }
     }
 }
-

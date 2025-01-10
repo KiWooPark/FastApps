@@ -17,7 +17,9 @@ class VideoListItemCell: UITableViewCell {
 
     @IBOutlet weak var playTimeBGView: UIView!
     @IBOutlet weak var playTimeLabel: UILabel!
-
+    
+    @IBOutlet weak var contentLeadingConstraint: NSLayoutConstraint!
+    
     private var imageTask: Task<Void, Never>?
 
     override func awakeFromNib() {
@@ -40,6 +42,7 @@ class VideoListItemCell: UITableViewCell {
         self.rankLabel.text = nil
         self.thumbnailImageView.image = nil
         self.playTimeLabel.text = nil
+        self.contentLeadingConstraint.constant = 0
     }
 
     func setData(_ data: VideoListItem, rank: Int?) {
@@ -53,5 +56,9 @@ class VideoListItemCell: UITableViewCell {
         self.descriptionLabel.text = data.channel
         self.playTimeLabel.text = DateComponentsFormatter.playTimeFormatter.string(from: data.playtime)
         self.imageTask = self.thumbnailImageView.loadImage(url: data.imageUrl)
+    }
+    
+    func setLeadingConstraint(_ leading: CGFloat) {
+        self.contentLeadingConstraint.constant = leading
     }
 }

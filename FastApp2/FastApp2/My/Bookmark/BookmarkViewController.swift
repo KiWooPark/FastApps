@@ -8,24 +8,47 @@
 import UIKit
 
 class BookmarkViewController: UIViewController {
-
+    @IBOutlet weak var bookmarkTableView: UITableView!
+    let viewModel: BookmarkViewModel = .init()
+    
     override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.bookmarkTableView.dataSource = self
+        self.bookmarkTableView.delegate = self
+        
+        self.bookmarkTableView.register(
+            UINib(nibName: BookmarkCell.identifier, bundle: nil),
+            forCellReuseIdentifier: BookmarkCell.identifier
+        )
+        
+        // 데이터 바인딩
+        self.viewModel.dataChanged = { [weak self] in
+            self?.bookmarkTableView.reloadData()
+        }
+        // 데이터 로드
+        self.viewModel.request()
+    }
+}
+
+extension BookmarkViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.viewModel.channels?.count ?? 0
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: BookmarkCell.identifier, for: indexPath)
+        
+        if let cell = cell as? BookmarkCell,
+           let data = self.viewModel.channels?[indexPath.row]
+        {
+            cell.setData(data)
+        }
+        
+        return cell
     }
-    */
-
 }
+
+extension BookmarkViewController: UITableViewDelegate {}

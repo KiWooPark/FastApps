@@ -27,6 +27,8 @@
 		1610964D2D2FE4DA0015B230 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */; };
 		1610964F2D2FE4E30015B230 /* BookmarkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */; };
 		161096512D2FE6440015B230 /* MyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096502D2FE6440015B230 /* MyNavigationController.swift */; };
+		161096552D2FE7A50015B230 /* BookmarkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161096532D2FE7A50015B230 /* BookmarkCell.swift */; };
+		161096562D2FE7A50015B230 /* BookmarkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 161096542D2FE7A50015B230 /* BookmarkCell.xib */; };
 		16149A732D2D0DFD00F885EF /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16149A712D2D0DFD00F885EF /* MoreViewController.swift */; };
 		16149A742D2D0DFD00F885EF /* MoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16149A722D2D0DFD00F885EF /* MoreViewController.xib */; };
 		164C7D012D157014007E2F18 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164C7D002D157014007E2F18 /* HomeViewModel.swift */; };
@@ -94,6 +96,8 @@
 		1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewModel.swift; sourceTree = "<group>"; };
 		161096502D2FE6440015B230 /* MyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyNavigationController.swift; sourceTree = "<group>"; };
+		161096532D2FE7A50015B230 /* BookmarkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkCell.swift; sourceTree = "<group>"; };
+		161096542D2FE7A50015B230 /* BookmarkCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkCell.xib; sourceTree = "<group>"; };
 		16149A712D2D0DFD00F885EF /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		16149A722D2D0DFD00F885EF /* MoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreViewController.xib; sourceTree = "<group>"; };
 		164C7D002D157014007E2F18 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		161096462D2FE47F0015B230 /* Bookmark */ = {
 			isa = PBXGroup;
 			children = (
+				161096522D2FE7940015B230 /* Cell */,
 				1610964A2D2FE4A10015B230 /* BookmarkViewController.swift */,
 				1610964E2D2FE4E30015B230 /* BookmarkViewModel.swift */,
 			);
@@ -263,6 +268,15 @@
 				1610964C2D2FE4DA0015B230 /* FavoriteViewModel.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		161096522D2FE7940015B230 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				161096532D2FE7A50015B230 /* BookmarkCell.swift */,
+				161096542D2FE7A50015B230 /* BookmarkCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		16149A702D2D0DB800F885EF /* More */ = {
@@ -421,6 +435,7 @@
 				1690CE242D26821C00989A1A /* HomeRankingItemCell.xib in Resources */,
 				164C7D132D15708C007E2F18 /* HomeFooterView.xib in Resources */,
 				16688DBD2D27B363000025B0 /* live.json in Resources */,
+				161096562D2FE7A50015B230 /* BookmarkCell.xib in Resources */,
 				1690CE282D26883600989A1A /* HomeRecentWatchContainerCell.xib in Resources */,
 				160613242D0715D5002C5707 /* HomeVideoCell.xib in Resources */,
 				160613102D070140002C5707 /* Main.storyboard in Resources */,
@@ -469,6 +484,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16688DAF2D27B284000025B0 /* Bookmark.swift in Sources */,
+				161096552D2FE7A50015B230 /* BookmarkCell.swift in Sources */,
 				1677D9652D2D126500323461 /* MoreViewModel.swift in Sources */,
 				1690CE232D26821C00989A1A /* HomeRankingItemCell.swift in Sources */,
 				161096452D2FE47B0015B230 /* MyViewController.swift in Sources */,
