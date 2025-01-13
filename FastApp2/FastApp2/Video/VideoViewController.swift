@@ -77,6 +77,13 @@ class VideoViewController: UIViewController {
         
         self.switchControlPannel(size: size)
         self.playerViewBottomConstraint.isActive = self.isLandscape(size: size)
+        
+        self.chattingView.chattingTextField.resignFirstResponder()
+         
+        coordinator.animate { _ in
+            self.chattingView.chattingCollectionView.collectionViewLayout.invalidateLayout()
+        }
+        
         super.viewWillTransition(to: size, with: coordinator)
     }
     
@@ -275,6 +282,5 @@ extension VideoViewController: UITableViewDataSource {
 extension VideoViewController: ChattingViewDeleagte {
     func liveChattingViewCloseTapped(_ chattingView: ChattingView) {
         self.chattingView.isHidden = true
-        
     }
 }

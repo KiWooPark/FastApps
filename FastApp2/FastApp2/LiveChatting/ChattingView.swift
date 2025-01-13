@@ -92,7 +92,12 @@ class ChattingView: UIView {
     }
     
     @IBAction func closeBtnTapped(_ sender: Any) {
+        self.chattingTextField.resignFirstResponder()
         self.delegate?.liveChattingViewCloseTapped(self)
+    }
+    
+    @IBAction func dismissKeyboard(_ sender: Any) {
+        self.chattingTextField.resignFirstResponder()
     }
 }
 
