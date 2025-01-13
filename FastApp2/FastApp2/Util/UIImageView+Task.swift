@@ -19,7 +19,7 @@ extension UIImageView {
                 
                 self.image = image
             } catch {
-                print("loadImage Error")
+                print("loadImage Error \(error.localizedDescription)")
             }
         }
         

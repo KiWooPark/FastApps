@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,7 +18,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="랭킹 리스트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plg-Sp-xPv">
-                            <rect key="frame" x="21" y="21" width="82.666666666666671" height="52"/>
+                            <rect key="frame" x="0.0" y="21" width="82.666666666666671" height="52"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" name="main-wh"/>
                             <nil key="highlightedColor"/>
@@ -27,18 +26,17 @@
                     </subviews>
                     <color key="backgroundColor" name="live-red"/>
                     <constraints>
-                        <constraint firstItem="plg-Sp-xPv" firstAttribute="leading" secondItem="RI8-8M-gle" secondAttribute="leading" constant="21" id="FO5-EO-Vnm"/>
+                        <constraint firstItem="plg-Sp-xPv" firstAttribute="leading" secondItem="RI8-8M-gle" secondAttribute="leading" id="FO5-EO-Vnm"/>
                         <constraint firstItem="plg-Sp-xPv" firstAttribute="top" secondItem="RI8-8M-gle" secondAttribute="top" constant="21" id="raT-fA-KWj"/>
                         <constraint firstAttribute="bottom" secondItem="plg-Sp-xPv" secondAttribute="bottom" constant="21" id="tzw-su-wqB"/>
                     </constraints>
                 </view>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <constraints>
                 <constraint firstItem="RI8-8M-gle" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Aob-CP-bn9"/>
                 <constraint firstAttribute="bottom" secondItem="RI8-8M-gle" secondAttribute="bottom" id="HGC-KJ-p5f"/>
-                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="RI8-8M-gle" secondAttribute="trailing" id="KNU-iB-0V5"/>
-                <constraint firstItem="RI8-8M-gle" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="ruz-Aa-Ek3"/>
+                <constraint firstAttribute="trailing" secondItem="RI8-8M-gle" secondAttribute="trailing" id="KNU-iB-0V5"/>
+                <constraint firstItem="RI8-8M-gle" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" id="ruz-Aa-Ek3"/>
             </constraints>
             <point key="canvasLocation" x="51.908396946564885" y="4.2253521126760569"/>
         </collectionReusableView>
