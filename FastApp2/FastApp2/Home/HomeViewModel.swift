@@ -16,7 +16,8 @@ class HomeViewModel {
     func requestData() {
         Task {
             do {
-                let home = try await NetworkLoader.loadData(url: APIEndpoints.home, for: Home.self)
+//                let home = try await NetworkLoader.loadData(url: APIEndpoints.home, for: Home.self)
+                let home = try await NetworkLoader.load(json: "home", for: Home.self)
                 self.homeModel = home
                 self.recommendViewModel.recommends = home.recommends
                 self.dataChanged?()

@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // 영상 백그라운드 처리
+        do {
+            let audioSession = AVAudioSession.sharedInstance()
+            try audioSession.setCategory(.playback)
+            try audioSession.setActive(true)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
         return true
     }
 

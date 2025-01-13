@@ -15,7 +15,8 @@ import Foundation
     func request() {
         Task {
             do {
-                let video = try await NetworkLoader.loadData(url: APIEndpoints.video, for: Video.self)
+//                let video = try await NetworkLoader.loadData(url: APIEndpoints.video, for: Video.self)
+                let video = try NetworkLoader.load(json: "video", for: Video.self)
                 self.video = video
                 self.dataChangeHandler?(video)
             } catch {

@@ -29,7 +29,7 @@ enum NetworkLoader {
         return try jsonDecoder.decode(T.self, from: data)
     }
 
-    
+    // 이미지 로드
     static func loadImageData(from url: URL) async throws -> Data {
         let (data, response) = try await session.data(for: .init(url: url))
         
@@ -43,4 +43,20 @@ enum NetworkLoader {
         
         return data
     }
+    
+    static func load<T: Decodable>(json: String, for type: T.Type) throws -> T {
+        guard let jsonUrl = Bundle.main.url(forResource: json, withExtension: "json")
+        else {
+            throw JSONError.notFound
+        }
+        
+        let jsonDecoder = JSONDecoder()
+        let data = try Data(contentsOf: jsonUrl)
+        let model = try jsonDecoder.decode(T.self, from: data)
+        return model
+    }
+}
+
+enum JSONError: Error {
+    case notFound
 }
